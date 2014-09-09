@@ -10,7 +10,7 @@
 #define seu_PublicDef_h
 
 // HTTP Server 地址
-#define HttpRestUrlFormat           @"http://www.51evnt.com/"
+#define HttpRestUrlFormat           @"http://www.51vent.com/"
 
 #pragma mark - 资源
 #define DOCUMENTS                   @"Documents"
