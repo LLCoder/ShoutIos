@@ -213,9 +213,7 @@ DEFINE_SINGLETON_FOR_CLASS(HttpNetworkCtrl)
 				
 			}
 			else {
-				char tch = 0 ;
 				[requestInfo.recData setData:tempData];
-				[requestInfo.recData appendBytes: &tch length:1] ;
 			}
         }
             

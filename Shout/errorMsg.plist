@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>101</key>
+	<string>未传递MemberTe、MemberPassword、MemberName参数</string>
 	<key>201</key>
 	<string>用户不存在</string>
 	<key>202</key>
@@ -10,5 +12,31 @@
 	<string>用户已删除</string>
 	<key>204</key>
 	<string>参数错误</string>
+	<key>301</key>
+	<string>当天无数据</string>
+	<key>401</key>
+	<string>数据库无数据，返回空</string>
+	<key>402</key>
+	<string>使用者不存在或被删除</string>
+	<key>403</key>
+	<string>未传递MemberId参数</string>
+	<key>404</key>
+	<string>无可用创口贴</string>
+	<key>501</key>
+	<string>数据库无数据，返回空</string>
+	<key>502</key>
+	<string>未传递MemberId,VentShow,VentColor参数</string>
+	<key>601</key>
+	<string>未传递VentId参数</string>
+	<key>701</key>
+	<string>使用者不存在或被删除</string>
+	<key>702</key>
+	<string>未传递MemberId参数</string>
+	<key>801</key>
+	<string>使用者不存在或被删除</string>
+	<key>802</key>
+	<string>未传递MemberId，MemberDB参数</string>
+	<key>901</key>
+	<string>数据库无数据，无排名</string>
 </dict>
 </plist>

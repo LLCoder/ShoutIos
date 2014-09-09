@@ -36,7 +36,7 @@
         if (ISDICTIONARYCLASS(dicData)) {
             loginRst.memberId = [dicData objectForKey:@"MemberId"];
             loginRst.memberTel = [dicData objectForKey:@"MemberTel"];
-            loginRst.memberName = [dicData objectForKey:@"MemberNam"];
+            loginRst.memberName = [dicData objectForKey:@"MemberName"];
         }
     }else if (self.statusCode == 404){
         loginRst.message = @"服务器异常";

@@ -106,11 +106,7 @@ DEFINE_SINGLETON_FOR_CLASS(NetworkModel)
             switch (requestType) {
                 case RequestTypeMsg:
                 case RequestTypeUpload:{
-                    NSDictionary *resultDic = nil;
-                    if (ISDICTIONARYCLASS(jsonData)) {
-                        resultDic = [jsonData objectForKey:@"BiCanBa"];
-                    }
-                    netRst = [requestInterface requestDecode:resultDic];
+                    netRst = [requestInterface requestDecode:jsonData];
                     netRst.cmdCode = receiveMsg.cmdCode;
                     netRst.requestCode = receiveMsg.requestCode;
                     break;
