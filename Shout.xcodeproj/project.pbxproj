@@ -49,6 +49,10 @@
 		EF73035419BD8F4D00656F85 /* LoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EF73035319BD8F4D00656F85 /* LoginModel.m */; };
 		EFD94FD519BDD8B800A68467 /* BLTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD94FD419BDD8B800A68467 /* BLTipView.m */; };
 		EFD94FD719BDE37900A68467 /* errorMsg.plist in Resources */ = {isa = PBXBuildFile; fileRef = EFD94FD619BDE37900A68467 /* errorMsg.plist */; };
+		FC1466E119C02EF100A2CFEC /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1466DF19C02EF100A2CFEC /* BaseViewController.m */; };
+		FC1466E219C02EF100A2CFEC /* BaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC1466E019C02EF100A2CFEC /* BaseViewController.xib */; };
+		FC1466E719C035C700A2CFEC /* LoginNibViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1466E519C035C700A2CFEC /* LoginNibViewController.m */; };
+		FC1466E819C035C700A2CFEC /* LoginNibViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC1466E619C035C700A2CFEC /* LoginNibViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -136,6 +140,12 @@
 		EFD94FD319BDD8B800A68467 /* BLTipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLTipView.h; sourceTree = "<group>"; };
 		EFD94FD419BDD8B800A68467 /* BLTipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLTipView.m; sourceTree = "<group>"; };
 		EFD94FD619BDE37900A68467 /* errorMsg.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = errorMsg.plist; sourceTree = "<group>"; };
+		FC1466DE19C02EF100A2CFEC /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		FC1466DF19C02EF100A2CFEC /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		FC1466E019C02EF100A2CFEC /* BaseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BaseViewController.xib; sourceTree = "<group>"; };
+		FC1466E419C035C700A2CFEC /* LoginNibViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginNibViewController.h; sourceTree = "<group>"; };
+		FC1466E519C035C700A2CFEC /* LoginNibViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginNibViewController.m; sourceTree = "<group>"; };
+		FC1466E619C035C700A2CFEC /* LoginNibViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginNibViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +201,7 @@
 		EF3526A919BC8E9F006A5521 /* Shout */ = {
 			isa = PBXGroup;
 			children = (
+				FC1466DD19C02EC200A2CFEC /* ViewControllers */,
 				EF3526B219BC8E9F006A5521 /* AppDelegate.h */,
 				EF3526B319BC8E9F006A5521 /* AppDelegate.m */,
 				EF73034F19BD8F3700656F85 /* LoginController.h */,
@@ -350,6 +361,19 @@
 			path = ViewsAndControllers;
 			sourceTree = "<group>";
 		};
+		FC1466DD19C02EC200A2CFEC /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FC1466DE19C02EF100A2CFEC /* BaseViewController.h */,
+				FC1466DF19C02EF100A2CFEC /* BaseViewController.m */,
+				FC1466E019C02EF100A2CFEC /* BaseViewController.xib */,
+				FC1466E419C035C700A2CFEC /* LoginNibViewController.h */,
+				FC1466E519C035C700A2CFEC /* LoginNibViewController.m */,
+				FC1466E619C035C700A2CFEC /* LoginNibViewController.xib */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -403,6 +427,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF3526BC19BC8E9F006A5521 /* Images.xcassets in Resources */,
+				FC1466E819C035C700A2CFEC /* LoginNibViewController.xib in Resources */,
+				FC1466E219C02EF100A2CFEC /* BaseViewController.xib in Resources */,
 				EFD94FD719BDE37900A68467 /* errorMsg.plist in Resources */,
 				EF3526AE19BC8E9F006A5521 /* InfoPlist.strings in Resources */,
 			);
@@ -415,6 +441,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC1466E719C035C700A2CFEC /* LoginNibViewController.m in Sources */,
 				EF35271919BC9B60006A5521 /* PublicFunction.m in Sources */,
 				EF3526F419BC9882006A5521 /* ASIDataCompressor.m in Sources */,
 				EF35271219BC9AAF006A5521 /* RequestInfo.m in Sources */,
@@ -428,6 +455,7 @@
 				EF35272519BCA606006A5521 /* KBJSONSerializing.m in Sources */,
 				EF3526F319BC9882006A5521 /* ASIAuthenticationDialog.m in Sources */,
 				EF3526F719BC9882006A5521 /* ASIFormDataRequest.m in Sources */,
+				FC1466E119C02EF100A2CFEC /* BaseViewController.m in Sources */,
 				EF73034B19BD86CF00656F85 /* RequestAddDB.m in Sources */,
 				EF73034519BD868A00656F85 /* RequestMsgClick.m in Sources */,
 				EF35271319BC9AAF006A5521 /* NetRst_Struct.m in Sources */,

@@ -7,24 +7,46 @@
 //
 
 #import "AppDelegate.h"
-#import "LoginController.h"
+#import "LoginNibViewController.h"
 
 @implementation AppDelegate
+@synthesize mainNav;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:YES];
-    [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationFade];
-    
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.backgroundColor = [UIColor whiteColor];
-    self.window.rootViewController = [[LoginController alloc]init];
+    //self.window.backgroundColor = [UIColor whiteColor];
+    if (IOS7_OR_LATER)
+    {
+        [application setStatusBarStyle:UIStatusBarStyleLightContent];
+        //[application setStatusBarHidden:NO withAnimation:UIStatusBarAnimationFade];
+        self.window.clipsToBounds =YES;
+        self.window.frame =  CGRectMake(0,20,self.window.frame.size.width,self.window.frame.size.height-20);
+        //Added on 19th Sep 2013
+        self.window.bounds = CGRectMake(0, 20, self.window.frame.size.width, self.window.frame.size.height);
+    }
+    
+    [self goLoginController];
+    
+    self.window.rootViewController = mainNav;
     [self.window makeKeyAndVisible];
     return YES;
 }
-							
+
+-(void)goLoginController{
+    
+    LoginNibViewController* lc = [[LoginNibViewController alloc] initWithNibName:@"LoginNibViewController" bundle:nil];
+    if (nil == mainNav) {
+        
+        mainNav = [[UINavigationController alloc] initWithRootViewController:lc];
+    }
+    else{
+        [mainNav setViewControllers:[NSArray arrayWithObject:lc]];
+    }
+}
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
