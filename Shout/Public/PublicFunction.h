@@ -12,7 +12,7 @@ extern void dispatch_execute_in_worker_queue_after(int64_t delay, dispatch_block
 extern void dispatch_execute_in_main_queue(dispatch_block_t block);
 extern void dispatch_execute_in_main_queue_after(int64_t delay, dispatch_block_t block);
 
-extern CGRect CGBoundFromRect(CGRect rect);
+extern struct CGRect CGBoundFromRect(CGRect rect);
 
 @interface PublicFunction : NSObject
 //通过域名获取ip地址

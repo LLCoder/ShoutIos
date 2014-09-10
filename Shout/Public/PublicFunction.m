@@ -54,7 +54,7 @@ void dispatch_execute_in_worker_queue_after(int64_t delay, dispatch_block_t bloc
 }
 
 
-CGRect CGBoundFromRect(CGRect rect)
+struct CGRect CGBoundFromRect(struct CGRect rect)
 {
     return CGRectMake(0.0f, 0.0f, rect.size.width, rect.size.height);
 }
