@@ -19,6 +19,7 @@
 #pragma mark -
 #pragma mark macro
 
+#define kDebugTest  1
 //界面宽高
 #define BatteryHeight 20.0
 #define NavBarHeight  44.0

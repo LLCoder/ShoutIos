@@ -12,4 +12,7 @@
 
 @property (strong, nonatomic) UIWindow *window;
 @property (nonatomic, strong) UINavigationController* mainNav;
+
+-(void)goLoginController;
+-(void)goMainViewController;
 @end

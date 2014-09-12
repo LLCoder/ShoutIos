@@ -14,6 +14,7 @@
 
 @implementation BaseViewController
 @synthesize bLoadingData,bShowBack,bShowMore,strNavTitle;
+@synthesize bShowNav;
 
 - (void)dealloc
 {
@@ -25,6 +26,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        self.bShowNav = YES;
     }
     return self;
 }
@@ -34,6 +36,24 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self.navigationController.navigationBar setHidden:YES];
+    if (IOS7_OR_LATER)
+    {
+        //某个仅支持7.0以上版本的方法
+        self.edgesForExtendedLayout = UIRectEdgeNone;
+        self.extendedLayoutIncludesOpaqueBars = NO;
+        self.modalPresentationCapturesStatusBarAppearance = NO;
+        
+        
+//        if ( self.navigationController.navigationBarHidden == YES )
+//        {
+//            [self.view setBounds:CGRectMake(0, -20, self.view.bounds.size.width, self.view.bounds.size.height)];
+//        }
+//        else
+//        {
+//            self.edgesForExtendedLayout = UIRectEdgeNone;
+//        }
+    }
+    
     [self initNavBar];
 }
 
@@ -48,21 +68,21 @@
 
 -(void)initNavBar{
     
+    if (!bShowNav) {
+        return;
+    }
+    
     UIImage* imageN = [UIImage imageNamed:@"ic_header_bg"];// // 图片尺寸问题竖屏：44px(retina 屏则为 88px)横屏：32px (retina 屏则为 64px)
     int iStatusBarHeight = 0;
-    
-    if (IOS7_OR_LATER) {/// ios7.0
-        iStatusBarHeight = k_Height_IOS7_Move;
-    }
     
     CGRect rect = CGRectMake(0, iStatusBarHeight, 320, self.navigationController.navigationBar.frame.size.height);
     
     UINavigationBar *customNavigationBar = [[UINavigationBar alloc] initWithFrame:rect];
     UIImageView *navigationBarBackgroundImageView = [[UIImageView alloc] initWithImage:imageN];
     navigationBarBackgroundImageView.frame = rect;
-    navigationBarBackgroundImageView.backgroundColor = [UIColor colorWithRed:82/255.0
-                                                                       green:168/255.0
-                                                                        blue:249/255.0
+    navigationBarBackgroundImageView.backgroundColor = [UIColor colorWithRed:22/255.0
+                                                                       green:122/255.0
+                                                                        blue:237/255.0
                                                                        alpha:1.0];
     [customNavigationBar addSubview:navigationBarBackgroundImageView];
     SAFERELEASE(navigationBarBackgroundImageView);
@@ -96,7 +116,9 @@
         [btnRight addTarget:self action:@selector(BackButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
         [customNavigationBar addSubview:btnRight];
     }
-    
+    if (IOS7_OR_LATER) {/// ios7.0
+        iStatusBarHeight = k_Height_IOS7_Move;
+    }
     /// titleView
     rect = CGRectMake((self.view.frame.size.width-80)/2, iStatusBarHeight, 80, self.navigationController.navigationBar.frame.size.height);
     rect.origin.x = 50;
@@ -105,7 +127,7 @@
     labName.backgroundColor = [UIColor clearColor];
     labName.textAlignment = NSTextAlignmentCenter;
     labName.textColor = [UIColor whiteColor];
-    labName.font = [UIFont systemFontOfSize:24];
+    labName.font = [UIFont systemFontOfSize:18];
     labName.text = strNavTitle;
     labName.tag = k_Tag_TitleName;
     //labName.adjustsFontSizeToFitWidth = YES;

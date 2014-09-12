@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "LoginNibViewController.h"
+#import "WelcomeViewController.h"
+#import "MainViewController.h"
 
 @implementation AppDelegate
 @synthesize mainNav;
@@ -18,21 +20,32 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     //self.window.backgroundColor = [UIColor whiteColor];
-    if (IOS7_OR_LATER)
-    {
-        [application setStatusBarStyle:UIStatusBarStyleLightContent];
-        //[application setStatusBarHidden:NO withAnimation:UIStatusBarAnimationFade];
-        self.window.clipsToBounds =YES;
-        self.window.frame =  CGRectMake(0,20,self.window.frame.size.width,self.window.frame.size.height-20);
-        //Added on 19th Sep 2013
-        self.window.bounds = CGRectMake(0, 20, self.window.frame.size.width, self.window.frame.size.height);
+//    if (IOS7_OR_LATER)
+//    {
+//        [application setStatusBarStyle:UIStatusBarStyleLightContent];
+//        //[application setStatusBarHidden:NO withAnimation:UIStatusBarAnimationFade];
+//        self.window.clipsToBounds =YES;
+//        self.window.frame =  CGRectMake(0,20,self.window.frame.size.width,self.window.frame.size.height-20);
+//        //Added on 19th Sep 2013
+//        self.window.bounds = CGRectMake(0, 20, self.window.frame.size.width, self.window.frame.size.height);
+//    }
+    if (nil == [PublicFunction isFirst]
+        || ![[PublicFunction isFirst] isEqualToString:@"1"]) {
+        [self goWelcomeController];
+    }
+    else{
+        [self goMainViewController];
     }
     
-    [self goLoginController];
-    
-    self.window.rootViewController = mainNav;
     [self.window makeKeyAndVisible];
     return YES;
+}
+
+-(void)goWelcomeController{
+    
+    WelcomeViewController* lc = [[WelcomeViewController alloc] initWithNibName:@"WelcomeViewController" bundle:nil];
+    
+    self.window.rootViewController = lc;
 }
 
 -(void)goLoginController{
@@ -45,6 +58,20 @@
     else{
         [mainNav setViewControllers:[NSArray arrayWithObject:lc]];
     }
+    self.window.rootViewController = mainNav;
+}
+
+-(void)goMainViewController{
+    
+    MainViewController* lc = [[MainViewController alloc] initWithNibName:@"MainViewController" bundle:nil];
+    if (nil == mainNav) {
+        
+        mainNav = [[UINavigationController alloc] initWithRootViewController:lc];
+    }
+    else{
+        [mainNav setViewControllers:[NSArray arrayWithObject:lc]];
+    }
+    self.window.rootViewController = mainNav;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

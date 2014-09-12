@@ -33,6 +33,7 @@
     if (self) {
         // Custom initialization
         self.strNavTitle = @"登陆界面";
+        self.bShowNav = NO;
     }
     return self;
 }
@@ -62,6 +63,12 @@
 
 
 - (IBAction)btnLoginClick:(id)sender{
+    
+#if kDebugTest
+        [[PublicFunction appDelegate] goMainViewController];
+        return;
+#endif
+    
     if (!ISEXISTSTR(tfNumber.text)) {
         [BLTipView showWithTitle:@"手机号不能为空"];
         return;

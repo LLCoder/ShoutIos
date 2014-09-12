@@ -481,4 +481,17 @@ struct CGRect CGBoundFromRect(struct CGRect rect)
     return [normalFormatter stringFromDate:date];
 }
 
++ (NSString *)isFirst{
+    return [[NSUserDefaults standardUserDefaults] objectForKey:@"isFirst"];
+}
+
++ (void)setIsFirst{
+    [[NSUserDefaults standardUserDefaults] setObject:@"1" forKey:@"isFirst"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
++(AppDelegate*)appDelegate;{
+    
+    return (AppDelegate*)[UIApplication sharedApplication].delegate;
+}
 @end

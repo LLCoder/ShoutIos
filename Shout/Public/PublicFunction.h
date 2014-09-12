@@ -14,6 +14,8 @@ extern void dispatch_execute_in_main_queue_after(int64_t delay, dispatch_block_t
 
 extern struct CGRect CGBoundFromRect(CGRect rect);
 
+#import "AppDelegate.h"
+
 @interface PublicFunction : NSObject
 //通过域名获取ip地址
 + (NSString *) getIPWithHostName:(const NSString *)hostName;
@@ -79,4 +81,9 @@ extern struct CGRect CGBoundFromRect(CGRect rect);
 //格式化时间对象为字符串，格式为"yyyy-MM-dd HH:mm:ss"
 + (NSString *)timeStringWithNormalFormatter:(NSDate *)date;
 
++ (NSString *)isFirst;
+
++ (void)setIsFirst;
+
++(AppDelegate*)appDelegate;
 @end
