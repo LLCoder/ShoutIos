@@ -57,30 +57,52 @@
     [tfPw resignFirstResponder];
 }
 
-- (IBAction)btnRegisterClick:(id)sender{
+- (BOOL)conditionsCheck{
+    BOOL result = YES;
     
+    if (!ISEXISTSTR(tfNumber.text)) {
+        [BLTipView showWithTitle:@"手机号不能为空"];
+        return NO;
+    }
+    
+    if (!ISEXISTSTR(tfPw.text)) {
+        [BLTipView showWithTitle:@"密码不能为空"];
+        return NO;
+    }
+    
+    return result;
+}
+
+- (IBAction)btnRegisterClick:(id)sender{
+    if (![self conditionsCheck]) {
+        return;
+    }
+    
+    [[LoginModel sharedInstance]registerWithMemberTel:tfNumber.text password:tfPw.text resultBlock:^(NSString *errorStr) {
+        if (nil == errorStr) {
+           [BLTipView showWithTitle:@"注册成功"];
+        }else{
+            [BLTipView showWithTitle:errorStr];
+        }
+    }];
 }
 
 
 - (IBAction)btnLoginClick:(id)sender{
     
-#if kDebugTest
-        [[PublicFunction appDelegate] goMainViewController];
-        return;
-#endif
+//#if kDebugTest
+//        [[PublicFunction appDelegate] goMainViewController];
+//        return;
+//#endif
     
-    if (!ISEXISTSTR(tfNumber.text)) {
-        [BLTipView showWithTitle:@"手机号不能为空"];
+    if (![self conditionsCheck]) {
         return;
     }
     
-    if (!ISEXISTSTR(tfPw.text)) {
-        [BLTipView showWithTitle:@"密码不能为空"];
-        return;
-    }
     
     [[LoginModel sharedInstance]loginWithMemberTel:tfNumber.text password:tfPw.text resultBlock:^(NSString *errorStr) {
         if (nil == errorStr) {
+            [[PublicFunction appDelegate] goMainViewController];
             NSLog(@"login successful");
         }else{
             [BLTipView showWithTitle:errorStr];

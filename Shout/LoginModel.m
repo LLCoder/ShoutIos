@@ -8,6 +8,8 @@
 
 #import "LoginModel.h"
 #import "RequestLogin.h"
+#import "RequestRegister.h"
+
 @interface LoginModel(){
     NSString *_memberId;
     NSString *_memberTel;
@@ -59,6 +61,9 @@ DEFINE_SINGLETON_FOR_CLASS(LoginModel)
         LoginRst *loginData = (LoginRst *)netBaseRst;
         [self saveLoginData:loginData];
 
+        if (resultBlock) {
+            resultBlock(nil);
+        }
     };
     
     login.failedBlock = ^(NetBaseRst *netBaseRst) {
@@ -71,5 +76,26 @@ DEFINE_SINGLETON_FOR_CLASS(LoginModel)
     [login run];
 }
 
-
+- (void)registerWithMemberTel:(NSString *)memberTel password:(NSString *)pwd resultBlock:(void(^)(NSString * errorStr)) resultBlock{
+    RequestRegister *reqRegister = [[RequestRegister alloc]init];
+    reqRegister.memberTel = memberTel;
+    reqRegister.memberPWD = pwd;
+    reqRegister.completionBlock = ^(NetBaseRst *netBaseRst) {
+        RegisterRst *registerData = (RegisterRst *)netBaseRst;
+        [self saveLoginData:registerData];
+        
+        if (resultBlock) {
+            resultBlock(nil);
+        }
+    };
+    
+    reqRegister.failedBlock = ^(NetBaseRst *netBaseRst) {
+        if (resultBlock) {
+            resultBlock(netBaseRst.message);
+        }
+        
+    };
+    
+    [reqRegister run];
+}
 @end

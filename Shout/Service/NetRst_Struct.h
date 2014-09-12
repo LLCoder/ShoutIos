@@ -30,7 +30,7 @@ typedef void (^BLNetworkProgressBlock)(double progress);
 @property (nonatomic, strong)NSString     *memberName;
 @end
 
-@interface RegisterRst : NetBaseRst
+@interface RegisterRst : LoginRst
 
 @end
 //hendrike zhang
