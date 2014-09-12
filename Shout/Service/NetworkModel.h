@@ -16,6 +16,5 @@ DEFINE_SINGLETON_FOR_HEADER(NetworkModel)
 
 - (int)sendRequest:(RequestInterfaceBase*)request;
 - (void)removeAllReuest:(id)requestDelegate;
-- (void)cancelDownloadReuestWithFileName:(NSString *)fileName;
 - (void)cancelAllRequests;
 @end

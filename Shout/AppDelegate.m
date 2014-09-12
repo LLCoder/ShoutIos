@@ -10,6 +10,7 @@
 #import "LoginNibViewController.h"
 #import "WelcomeViewController.h"
 #import "MainViewController.h"
+#import "ShareManager.h"
 
 @implementation AppDelegate
 @synthesize mainNav;
@@ -36,6 +37,9 @@
     else{
         [self goMainViewController];
     }
+    
+    //第三方分享
+    [[ShareManager sharedInstance]start];
     
     [self.window makeKeyAndVisible];
     return YES;
