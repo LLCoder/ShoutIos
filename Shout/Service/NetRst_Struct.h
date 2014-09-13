@@ -30,9 +30,8 @@ typedef void (^BLNetworkProgressBlock)(double progress);
 @property (nonatomic, strong)NSString     *memberName;
 @end
 
-@interface RegisterRst : LoginRst
+typedef LoginRst RegisterRst;
 
-@end
 
 @class SentenceEntity;
 @interface GetSentenceRst : NetBaseRst
@@ -42,6 +41,12 @@ typedef void (^BLNetworkProgressBlock)(double progress);
 @class WoundPasteEntity;
 @interface GetWoundPasteRst : NetBaseRst
 @property (nonatomic, strong)WoundPasteEntity *woundPaste;
+@end
+
+typedef GetWoundPasteRst SendMessageRst;
+
+@interface GetRankingsRst : NetBaseRst
+@property (nonatomic, strong)NSMutableArray *rankings;
 @end
 //hendrike zhang
 #pragma mark NetworkRecDelegete

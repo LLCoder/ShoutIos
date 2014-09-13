@@ -18,4 +18,19 @@ DEFINE_SINGLETON_FOR_HEADER(MainModel);
 
 //获取创口贴
 - (void)getWoundPaste:(void(^)(WoundPasteEntity *woundPaste,NSString * errorStr)) resultBlock;
+
+//发送发泄数据
+- (void)sendVentShow:(NSString *)ventShow ventColor:(NSString *)ventColor resultBlock:(void(^)(WoundPasteEntity *woundPaste,NSString * errorStr)) resultBlock;
+
+//消息点击(你惨、我惨)
+- (void)messageClick:(NSString *)ventId resultBlock:(void(^)(NSString * errorStr)) resultBlock;
+
+//签到
+- (void)signIn:(void(^)(NSString * errorStr)) resultBlock;
+
+//写入分贝
+- (void)addDB:(NSString *)memberDB resultBlock:(void(^)(NSString * errorStr)) resultBlock;
+
+//分贝排名
+- (void)getRanking:(void(^)(NSMutableArray *rankings, NSString * errorStr)) resultBlock;
 @end

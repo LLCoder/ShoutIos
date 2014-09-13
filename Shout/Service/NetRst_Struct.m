@@ -22,17 +22,6 @@
 }
 @end
 
-@implementation RegisterRst
-
-
--(void)dealloc{
-    
-}
-
-
-
-@end
-
 @implementation GetSentenceRst
 
 - (instancetype)init{
@@ -51,6 +40,17 @@
     self = [super init];
     if (self) {
         _woundPaste = [[WoundPasteEntity alloc]init];
+    }
+    return self;
+}
+
+@end
+
+@implementation GetRankingsRst
+- (instancetype)init{
+    self = [super init];
+    if (self) {
+        _rankings = [[NSMutableArray alloc]initWithCapacity:5];
     }
     return self;
 }
