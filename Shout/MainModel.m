@@ -8,6 +8,8 @@
 
 #import "MainModel.h"
 #import "RequestOneSentence.h"
+#import "RequestWoundPaste.h"
+#import "LoginModel.h"
 
 @implementation MainModel
 DEFINE_SINGLETON_FOR_CLASS(MainModel);
@@ -31,6 +33,29 @@ DEFINE_SINGLETON_FOR_CLASS(MainModel);
     };
     
     [oneSentence run];
+}
+
+
+//获取创口贴
+- (void)getWoundPaste:(void(^)(WoundPasteEntity *woundPaste,NSString * errorStr)) resultBlock{
+    RequestWoundPaste *woundPaste = [[RequestWoundPaste alloc]init];
+    woundPaste.memberId = [LoginModel sharedInstance].memberId;
+    woundPaste.completionBlock = ^(NetBaseRst *netBaseRst) {
+        GetWoundPasteRst *woundPasteRst = (GetWoundPasteRst *)netBaseRst;
+        if (resultBlock) {
+            resultBlock(woundPasteRst.woundPaste,woundPasteRst.message);
+        }
+        
+    };
+    
+    woundPaste.failedBlock = ^(NetBaseRst *netBaseRst) {
+        if (resultBlock) {
+            resultBlock(nil,netBaseRst.message);
+        }
+        
+    };
+    
+    [woundPaste run];
 }
 
 @end

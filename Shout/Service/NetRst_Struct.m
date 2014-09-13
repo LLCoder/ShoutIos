@@ -8,6 +8,7 @@
 
 #import "NetRst_Struct.h"
 #import "SentenceEntity.h"
+#import "WoundPasteEntity.h"
 
 @implementation NetBaseRst
 
@@ -38,6 +39,18 @@
     self = [super init];
     if (self) {
         _sentence = [[SentenceEntity alloc]init];
+    }
+    return self;
+}
+
+@end
+
+@implementation GetWoundPasteRst
+
+- (instancetype)init{
+    self = [super init];
+    if (self) {
+        _woundPaste = [[WoundPasteEntity alloc]init];
     }
     return self;
 }

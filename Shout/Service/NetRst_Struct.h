@@ -38,6 +38,11 @@ typedef void (^BLNetworkProgressBlock)(double progress);
 @interface GetSentenceRst : NetBaseRst
 @property (nonatomic, strong)SentenceEntity *sentence;
 @end
+
+@class WoundPasteEntity;
+@interface GetWoundPasteRst : NetBaseRst
+@property (nonatomic, strong)WoundPasteEntity *woundPaste;
+@end
 //hendrike zhang
 #pragma mark NetworkRecDelegete
 @protocol NetworkRecDelegate<NSObject>
