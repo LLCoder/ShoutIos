@@ -7,7 +7,8 @@
 //
 
 #import "MainViewController.h"
-
+#import "GetViewController.h"
+#import "VentViewController.h"
 
 #define k_ViewControl_Counts    3
 
@@ -21,11 +22,18 @@
     IBOutlet UIPageControl* pageCtrl;
     
     IBOutlet UIImageView* imgShare;
+    IBOutlet UIImageView* imgRank;
+    
 }
 -(void)clickShare:(UITapGestureRecognizer*)sender;
+-(void)clickShoutRank:(UITapGestureRecognizer*)sender;
+-(IBAction)clickBtnGet:(id)sender;
+-(IBAction)clickBtnUse:(id)sender;
+-(IBAction)clickBtnHold:(id)sender;
 @end
 
 @implementation MainViewController
+@synthesize showView;
 
 - (void)dealloc
 {
@@ -47,31 +55,49 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    [self initViewControl:k_ViewControl_Counts];
+    
     if (kScreenIs4InchRetina) { // height 1136
         //[BaseViewController adjustmentSizeFor4Inch:scrollPage];
         CGRect rect = pageCtrl.frame;
         rect.origin.y += 80;//k_Height_IOS7_Move;
         pageCtrl.frame = rect;
     }
-
+    
     mainScroll.pagingEnabled = YES;
     if ([pageCtrl respondsToSelector:@selector(setCurrentPageIndicatorTintColor:)]
         && [pageCtrl respondsToSelector:@selector(setPageIndicatorTintColor:)]) {
         pageCtrl.currentPageIndicatorTintColor = [UIColor blueColor];
         pageCtrl.pageIndicatorTintColor = [UIColor lightGrayColor];
     }
-    [self initViewControl:k_ViewControl_Counts];
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickShare:)];
     tap.delegate = self;
     imgShare.userInteractionEnabled = YES;
     [imgShare addGestureRecognizer:tap];
+    
+    UITapGestureRecognizer *tapRank = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickShoutRank:)];
+    tapRank.delegate = self;
+    imgRank.userInteractionEnabled = YES;
+    [imgRank addGestureRecognizer:tapRank];
 }
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
-    mainScroll.contentSize = CGSizeMake(mainScroll.bounds.size.width*k_ViewControl_Counts, mainScroll.bounds.size.height);
+    if (mainScroll.contentSize.width != mainScroll.bounds.size.width*k_ViewControl_Counts) {
+        mainScroll.contentSize = CGSizeMake(mainScroll.bounds.size.width*k_ViewControl_Counts, mainScroll.bounds.size.height);
+    }
+    
+    if (view_OneSentence == showView) {
+        [mainScroll setContentOffset:CGPointMake(mainScroll.bounds.size.width*0, 0)];
+    }
+    else if (view_Shout == showView){
+        [mainScroll setContentOffset:CGPointMake(mainScroll.bounds.size.width*1, 0)];
+    }
+    else if (view_Shout == showView){
+        [mainScroll setContentOffset:CGPointMake(mainScroll.bounds.size.width*2, 0)];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -83,6 +109,28 @@
 -(void)clickShare:(UITapGestureRecognizer*)sender{
     
     NSLog(@"share");
+}
+
+-(void)clickShoutRank:(UITapGestureRecognizer*)sender{
+    
+}
+
+-(IBAction)clickBtnGet:(id)sender{
+    GetViewController* lc = [[GetViewController alloc] initWithNibName:@"GetViewController" bundle:nil];
+    lc.strNavTitle = @"获取";
+    [self.navigationController pushViewController:lc animated:YES];
+}
+
+-(IBAction)clickBtnUse:(id)sender{
+    VentViewController* lc = [[VentViewController alloc] initWithNibName:@"VentViewController" bundle:nil];
+    //lc.strNavTitle = @"获取";
+    self.showView = view_Tucao;
+    lc.bShowBack = YES;
+    [self.navigationController pushViewController:lc animated:YES];
+}
+
+-(IBAction)clickBtnHold:(id)sender{
+    
 }
 
 #pragma mark controlls init
@@ -129,7 +177,7 @@
             break;
         }
         case 2:{
-            [self setNavTitle:@"比比惨"];
+            [self setNavTitle:@"创可贴"];
             break;
         }
         default:

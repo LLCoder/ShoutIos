@@ -8,6 +8,15 @@
 
 #import "BaseViewController.h"
 
+typedef enum {
+    view_OneSentence,
+    view_Shout,
+    view_Tucao
+    
+}ViewName;
+
 @interface MainViewController : BaseViewController<UIGestureRecognizerDelegate>
+
+@property(nonatomic, assign)ViewName showView;
 
 @end

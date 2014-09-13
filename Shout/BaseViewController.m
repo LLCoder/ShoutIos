@@ -106,13 +106,13 @@
     
     if(bShowBack){
         /// backButton
-        rect = CGRectMake(5, iStatusBarHeight+7,
-                          30, 30);//self.navigationController.navigationBar.frame.size.height
+        rect = CGRectMake(5, iStatusBarHeight+20,
+                          13, 21);//self.navigationController.navigationBar.frame.size.height
         UIButton* btnRight = [UIButton buttonWithType:UIButtonTypeCustom];
         btnRight.frame = rect;
         btnRight.backgroundColor = [UIColor clearColor];
-        [btnRight setBackgroundImage:[UIImage imageNamed:@"ic_back_normal"] forState:UIControlStateNormal];
-        [btnRight setBackgroundImage:[UIImage imageNamed:@"ic_back_pressed"] forState:UIControlStateHighlighted];
+        [btnRight setBackgroundImage:[UIImage imageNamed:@"backArrow"] forState:UIControlStateNormal];
+//        [btnRight setBackgroundImage:[UIImage imageNamed:@"ic_back_pressed"] forState:UIControlStateHighlighted];
         [btnRight addTarget:self action:@selector(BackButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
         [customNavigationBar addSubview:btnRight];
     }
