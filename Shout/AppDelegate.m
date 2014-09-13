@@ -11,6 +11,7 @@
 #import "WelcomeViewController.h"
 #import "MainViewController.h"
 #import "ShareManager.h"
+#import "MainModel.h"
 
 @implementation AppDelegate
 @synthesize mainNav;
@@ -40,6 +41,7 @@
     
     //第三方分享
     [[ShareManager sharedInstance]start];
+    
     
     [self.window makeKeyAndVisible];
     return YES;

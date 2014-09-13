@@ -7,6 +7,7 @@
 //
 
 #import "NetRst_Struct.h"
+#import "SentenceEntity.h"
 
 @implementation NetBaseRst
 
@@ -25,6 +26,20 @@
 
 -(void)dealloc{
     
+}
+
+
+
+@end
+
+@implementation GetSentenceRst
+
+- (instancetype)init{
+    self = [super init];
+    if (self) {
+        _sentence = [[SentenceEntity alloc]init];
+    }
+    return self;
 }
 
 @end

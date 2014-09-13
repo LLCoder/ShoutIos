@@ -33,6 +33,11 @@ typedef void (^BLNetworkProgressBlock)(double progress);
 @interface RegisterRst : LoginRst
 
 @end
+
+@class SentenceEntity;
+@interface GetSentenceRst : NetBaseRst
+@property (nonatomic, strong)SentenceEntity *sentence;
+@end
 //hendrike zhang
 #pragma mark NetworkRecDelegete
 @protocol NetworkRecDelegate<NSObject>

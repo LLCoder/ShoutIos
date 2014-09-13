@@ -45,7 +45,6 @@
 		EF73034819BD86A900656F85 /* RequestSignIn.m in Sources */ = {isa = PBXBuildFile; fileRef = EF73034719BD86A900656F85 /* RequestSignIn.m */; };
 		EF73034B19BD86CF00656F85 /* RequestAddDB.m in Sources */ = {isa = PBXBuildFile; fileRef = EF73034A19BD86CF00656F85 /* RequestAddDB.m */; };
 		EF73034E19BD86EA00656F85 /* RequestRanking.m in Sources */ = {isa = PBXBuildFile; fileRef = EF73034D19BD86EA00656F85 /* RequestRanking.m */; };
-		EF73035119BD8F3700656F85 /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF73035019BD8F3700656F85 /* LoginController.m */; };
 		EF73035419BD8F4D00656F85 /* LoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EF73035319BD8F4D00656F85 /* LoginModel.m */; };
 		EF83182D19C34881003E9DCE /* QQConnection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF83180C19C34881003E9DCE /* QQConnection.framework */; };
 		EF83182E19C34881003E9DCE /* QZoneConnection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF83180D19C34881003E9DCE /* QZoneConnection.framework */; };
@@ -73,6 +72,8 @@
 		EF83184919C34950003E9DCE /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EF83184819C34950003E9DCE /* libstdc++.dylib */; };
 		EF83184B19C34969003E9DCE /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EF83184A19C34969003E9DCE /* libsqlite3.dylib */; };
 		EF83184E19C34A9C003E9DCE /* ShareManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EF83184D19C34A9C003E9DCE /* ShareManager.m */; };
+		EFB849CE19C3E5EC00F2E0FA /* MainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EFB849CD19C3E5EC00F2E0FA /* MainModel.m */; };
+		EFB849D219C3E6A400F2E0FA /* SentenceEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = EFB849D119C3E6A400F2E0FA /* SentenceEntity.m */; };
 		EFD94FD519BDD8B800A68467 /* BLTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD94FD419BDD8B800A68467 /* BLTipView.m */; };
 		EFD94FD719BDE37900A68467 /* errorMsg.plist in Resources */ = {isa = PBXBuildFile; fileRef = EFD94FD619BDE37900A68467 /* errorMsg.plist */; };
 		FC1466E119C02EF100A2CFEC /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1466DF19C02EF100A2CFEC /* BaseViewController.m */; };
@@ -173,8 +174,6 @@
 		EF73034A19BD86CF00656F85 /* RequestAddDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestAddDB.m; sourceTree = "<group>"; };
 		EF73034C19BD86EA00656F85 /* RequestRanking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestRanking.h; sourceTree = "<group>"; };
 		EF73034D19BD86EA00656F85 /* RequestRanking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestRanking.m; sourceTree = "<group>"; };
-		EF73034F19BD8F3700656F85 /* LoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginController.h; sourceTree = "<group>"; };
-		EF73035019BD8F3700656F85 /* LoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginController.m; sourceTree = "<group>"; };
 		EF73035219BD8F4D00656F85 /* LoginModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginModel.h; sourceTree = "<group>"; };
 		EF73035319BD8F4D00656F85 /* LoginModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginModel.m; sourceTree = "<group>"; };
 		EF83180C19C34881003E9DCE /* QQConnection.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QQConnection.framework; sourceTree = "<group>"; };
@@ -208,6 +207,10 @@
 		EF83184A19C34969003E9DCE /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		EF83184C19C34A9C003E9DCE /* ShareManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareManager.h; sourceTree = "<group>"; };
 		EF83184D19C34A9C003E9DCE /* ShareManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareManager.m; sourceTree = "<group>"; };
+		EFB849CC19C3E5EC00F2E0FA /* MainModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainModel.h; sourceTree = "<group>"; };
+		EFB849CD19C3E5EC00F2E0FA /* MainModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainModel.m; sourceTree = "<group>"; };
+		EFB849D019C3E6A400F2E0FA /* SentenceEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SentenceEntity.h; sourceTree = "<group>"; };
+		EFB849D119C3E6A400F2E0FA /* SentenceEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SentenceEntity.m; sourceTree = "<group>"; };
 		EFD94FD319BDD8B800A68467 /* BLTipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLTipView.h; sourceTree = "<group>"; };
 		EFD94FD419BDD8B800A68467 /* BLTipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLTipView.m; sourceTree = "<group>"; };
 		EFD94FD619BDE37900A68467 /* errorMsg.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = errorMsg.plist; sourceTree = "<group>"; };
@@ -317,10 +320,10 @@
 				FC1466DD19C02EC200A2CFEC /* ViewControllers */,
 				EF3526B219BC8E9F006A5521 /* AppDelegate.h */,
 				EF3526B319BC8E9F006A5521 /* AppDelegate.m */,
-				EF73034F19BD8F3700656F85 /* LoginController.h */,
-				EF73035019BD8F3700656F85 /* LoginController.m */,
 				EF73035219BD8F4D00656F85 /* LoginModel.h */,
 				EF73035319BD8F4D00656F85 /* LoginModel.m */,
+				EFB849CC19C3E5EC00F2E0FA /* MainModel.h */,
+				EFB849CD19C3E5EC00F2E0FA /* MainModel.m */,
 				EF83184C19C34A9C003E9DCE /* ShareManager.h */,
 				EF83184D19C34A9C003E9DCE /* ShareManager.m */,
 				EF3526D919BC9882006A5521 /* Service */,
@@ -351,6 +354,7 @@
 				EF35270B19BC9AAF006A5521 /* NetRst_Struct.m */,
 				EF35270A19BC9AAF006A5521 /* NetworkModel.h */,
 				EF35270119BC9AAF006A5521 /* NetworkModel.m */,
+				EFB849CF19C3E67B00F2E0FA /* DataEntity */,
 				EF35270219BC9AAF006A5521 /* NetworkControl */,
 				EF3526FC19BC9AAF006A5521 /* RequestInterface */,
 			);
@@ -562,6 +566,15 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
+		EFB849CF19C3E67B00F2E0FA /* DataEntity */ = {
+			isa = PBXGroup;
+			children = (
+				EFB849D019C3E6A400F2E0FA /* SentenceEntity.h */,
+				EFB849D119C3E6A400F2E0FA /* SentenceEntity.m */,
+			);
+			path = DataEntity;
+			sourceTree = "<group>";
+		};
 		EFD94FD219BDD89E00A68467 /* ViewsAndControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -699,9 +712,9 @@
 				EF35271019BC9AAF006A5521 /* AppRequest.m in Sources */,
 				FC5F4EFF19C17D1E00385F3A /* WelcomeViewController.m in Sources */,
 				EF73034219BD865F00656F85 /* RequestMessage.m in Sources */,
-				EF73035119BD8F3700656F85 /* LoginController.m in Sources */,
 				EF35270F19BC9AAF006A5521 /* NetworkModel.m in Sources */,
 				EF73035419BD8F4D00656F85 /* LoginModel.m in Sources */,
+				EFB849CE19C3E5EC00F2E0FA /* MainModel.m in Sources */,
 				EF73033919BD85B900656F85 /* RequestLogin.m in Sources */,
 				EF3526F819BC9882006A5521 /* ASIHTTPRequest.m in Sources */,
 				EF35272519BCA606006A5521 /* KBJSONSerializing.m in Sources */,
@@ -725,6 +738,7 @@
 				EF73034819BD86A900656F85 /* RequestSignIn.m in Sources */,
 				EF3526FB19BC9882006A5521 /* Reachability.m in Sources */,
 				FC5F4F0E19C18CBD00385F3A /* MainViewController.m in Sources */,
+				EFB849D219C3E6A400F2E0FA /* SentenceEntity.m in Sources */,
 				EFD94FD519BDD8B800A68467 /* BLTipView.m in Sources */,
 				EF35270D19BC9AAF006A5521 /* Data_Struct.m in Sources */,
 				EF3526F619BC9882006A5521 /* ASIDownloadCache.m in Sources */,
