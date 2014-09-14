@@ -12,4 +12,6 @@
 DEFINE_SINGLETON_FOR_HEADER(ShareManager);
 
 - (void)start;
+
+- (void)shareWithContent:(NSString *)content;
 @end
