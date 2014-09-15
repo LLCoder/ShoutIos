@@ -7,6 +7,7 @@
 //
 
 #import "RequestWoundPaste.h"
+#import "WoundPasteEntity.h"
 
 @implementation RequestWoundPaste
 -(id)init{
@@ -25,5 +26,25 @@
     [urlBody addElemValue:self.memberId ForKey:@"MemberId"];
     
     return urlBody.requestStr;
+}
+
+- (GetWoundPasteRst *)requestDecode:(id)recData{
+    GetWoundPasteRst *woundPasteRst = [[GetWoundPasteRst alloc]init];
+    [RequestInterfaceBase decodeResults:woundPasteRst recData:recData];
+    if (woundPasteRst.requestCode > 0 && (woundPasteRst.requestCode % 100 == 0)) {
+        NSDictionary *dicData = (NSDictionary *)recData;
+        if (ISDICTIONARYCLASS(dicData)) {
+            woundPasteRst.woundPaste.ventId = [dicData objectForKey:@"VentId"];
+            woundPasteRst.woundPaste.ventShow = [dicData objectForKey:@"VentShow"];
+            woundPasteRst.woundPaste.ventColor = [dicData objectForKey:@"VentColor"];
+            woundPasteRst.woundPaste.ventClicks = [[dicData objectForKey:@"VentClicks"] intValue];
+        }
+    }else if (self.statusCode == 404){
+        woundPasteRst.message = @"服务器异常";
+    }else {
+        woundPasteRst.message = [[RequestInterfaceBase errorDic]objectForKey:INTTOSTR(woundPasteRst.requestCode)];
+    }
+    
+	return woundPasteRst;
 }
 @end
