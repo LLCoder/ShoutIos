@@ -7,6 +7,7 @@
 //
 
 #import "RequestRanking.h"
+#import "RankingEntity.h"
 
 @implementation RequestRanking
 -(id)init{
@@ -18,6 +19,28 @@
         self.requestUrl = [[super requestUrl] stringByAppendingString:self.methodName];
 	}
 	return self;
+}
+
+- (GetRankingsRst *)requestDecode:(id)recData{
+    GetRankingsRst *rankingsRst = [[GetRankingsRst alloc]init];
+    [RequestInterfaceBase decodeResults:rankingsRst recData:recData];
+    if (rankingsRst.requestCode > 0 && (rankingsRst.requestCode % 100 == 0)) {
+        NSDictionary *dicData = (NSDictionary *)recData;
+        if (ISDICTIONARYCLASS(dicData)) {
+            RankingEntity *ranking = [[RankingEntity alloc]init];
+            [rankingsRst.rankings addObject:ranking];
+//            woundPasteRst.woundPaste.ventId = [dicData objectForKey:@"VentId"];
+//            woundPasteRst.woundPaste.ventShow = [dicData objectForKey:@"VentShow"];
+//            woundPasteRst.woundPaste.ventColor = [dicData objectForKey:@"VentColor"];
+//            woundPasteRst.woundPaste.ventClicks = [[dicData objectForKey:@"VentClicks"] intValue];
+        }
+    }else if (self.statusCode == 404){
+        rankingsRst.message = @"服务器异常";
+    }else {
+        rankingsRst.message = [[RequestInterfaceBase errorDic]objectForKey:INTTOSTR(rankingsRst.requestCode)];
+    }
+    
+	return rankingsRst;
 }
 
 @end

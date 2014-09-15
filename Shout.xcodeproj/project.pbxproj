@@ -75,6 +75,7 @@
 		EFB849CE19C3E5EC00F2E0FA /* MainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EFB849CD19C3E5EC00F2E0FA /* MainModel.m */; };
 		EFB849D219C3E6A400F2E0FA /* SentenceEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = EFB849D119C3E6A400F2E0FA /* SentenceEntity.m */; };
 		EFB849D519C43B6D00F2E0FA /* WoundPasteEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = EFB849D419C43B6D00F2E0FA /* WoundPasteEntity.m */; };
+		EFB849D819C4533A00F2E0FA /* RankingEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = EFB849D719C4533A00F2E0FA /* RankingEntity.m */; };
 		EFD94FD519BDD8B800A68467 /* BLTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD94FD419BDD8B800A68467 /* BLTipView.m */; };
 		EFD94FD719BDE37900A68467 /* errorMsg.plist in Resources */ = {isa = PBXBuildFile; fileRef = EFD94FD619BDE37900A68467 /* errorMsg.plist */; };
 		FC1466E119C02EF100A2CFEC /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1466DF19C02EF100A2CFEC /* BaseViewController.m */; };
@@ -237,6 +238,8 @@
 		EFB849D119C3E6A400F2E0FA /* SentenceEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SentenceEntity.m; sourceTree = "<group>"; };
 		EFB849D319C43B6D00F2E0FA /* WoundPasteEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WoundPasteEntity.h; sourceTree = "<group>"; };
 		EFB849D419C43B6D00F2E0FA /* WoundPasteEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WoundPasteEntity.m; sourceTree = "<group>"; };
+		EFB849D619C4533A00F2E0FA /* RankingEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankingEntity.h; sourceTree = "<group>"; };
+		EFB849D719C4533A00F2E0FA /* RankingEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankingEntity.m; sourceTree = "<group>"; };
 		EFD94FD319BDD8B800A68467 /* BLTipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLTipView.h; sourceTree = "<group>"; };
 		EFD94FD419BDD8B800A68467 /* BLTipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLTipView.m; sourceTree = "<group>"; };
 		EFD94FD619BDE37900A68467 /* errorMsg.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = errorMsg.plist; sourceTree = "<group>"; };
@@ -624,6 +627,8 @@
 				EFB849D119C3E6A400F2E0FA /* SentenceEntity.m */,
 				EFB849D319C43B6D00F2E0FA /* WoundPasteEntity.h */,
 				EFB849D419C43B6D00F2E0FA /* WoundPasteEntity.m */,
+				EFB849D619C4533A00F2E0FA /* RankingEntity.h */,
+				EFB849D719C4533A00F2E0FA /* RankingEntity.m */,
 			);
 			path = DataEntity;
 			sourceTree = "<group>";
@@ -823,6 +828,7 @@
 				EF3526F719BC9882006A5521 /* ASIFormDataRequest.m in Sources */,
 				FC1466E119C02EF100A2CFEC /* BaseViewController.m in Sources */,
 				EF83184E19C34A9C003E9DCE /* ShareManager.m in Sources */,
+				EFB849D819C4533A00F2E0FA /* RankingEntity.m in Sources */,
 				EF73034B19BD86CF00656F85 /* RequestAddDB.m in Sources */,
 				EF73034519BD868A00656F85 /* RequestMsgClick.m in Sources */,
 				EF35271319BC9AAF006A5521 /* NetRst_Struct.m in Sources */,
