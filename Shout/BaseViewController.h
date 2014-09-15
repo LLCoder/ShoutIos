@@ -19,6 +19,7 @@
 @property(nonatomic, assign)BOOL    bShowBack;
 @property(nonatomic, assign)BOOL bLoadingData;
 @property(nonatomic, assign)BOOL  bShowNav;
+@property(nonatomic, assign)BOOL  bShowNavBar;
 
 -(void) MoreButtonPressed:(id)sender;
 

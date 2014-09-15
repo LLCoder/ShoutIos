@@ -15,6 +15,7 @@
 @implementation BaseViewController
 @synthesize bLoadingData,bShowBack,bShowMore,strNavTitle;
 @synthesize bShowNav;
+@synthesize bShowNavBar;
 
 - (void)dealloc
 {
@@ -27,6 +28,7 @@
     if (self) {
         // Custom initialization
         self.bShowNav = YES;
+        self.bShowNavBar = YES;
     }
     return self;
 }
@@ -80,10 +82,16 @@
     UINavigationBar *customNavigationBar = [[UINavigationBar alloc] initWithFrame:rect];
     UIImageView *navigationBarBackgroundImageView = [[UIImageView alloc] initWithImage:imageN];
     navigationBarBackgroundImageView.frame = rect;
-    navigationBarBackgroundImageView.backgroundColor = [UIColor colorWithRed:22/255.0
-                                                                       green:122/255.0
-                                                                        blue:237/255.0
-                                                                       alpha:1.0];
+    if (bShowNavBar) {
+        navigationBarBackgroundImageView.backgroundColor = [UIColor colorWithRed:22/255.0
+                                                                           green:122/255.0
+                                                                            blue:237/255.0
+                                                                           alpha:1.0];
+    }
+    else{
+        navigationBarBackgroundImageView.backgroundColor = [UIColor whiteColor];
+    }
+    
     [customNavigationBar addSubview:navigationBarBackgroundImageView];
     SAFERELEASE(navigationBarBackgroundImageView);
     
@@ -106,8 +114,8 @@
     
     if(bShowBack){
         /// backButton
-        rect = CGRectMake(5, iStatusBarHeight+20,
-                          13, 21);//self.navigationController.navigationBar.frame.size.height
+        rect = CGRectMake(20, iStatusBarHeight+20,
+                          12, 20);//self.navigationController.navigationBar.frame.size.height
         UIButton* btnRight = [UIButton buttonWithType:UIButtonTypeCustom];
         btnRight.frame = rect;
         btnRight.backgroundColor = [UIColor clearColor];

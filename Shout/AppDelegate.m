@@ -21,6 +21,7 @@
     // Override point for customization after application launch.
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    [application setStatusBarStyle:UIStatusBarStyleLightContent];
     //self.window.backgroundColor = [UIColor whiteColor];
 //    if (IOS7_OR_LATER)
 //    {

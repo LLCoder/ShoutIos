@@ -112,12 +112,12 @@
 -(void)clickShare:(UITapGestureRecognizer*)sender{
     
     NSLog(@"share");
-    [[ShareManager sharedInstance]shareWithContent:@"hello"];
+    //[[ShareManager sharedInstance]shareWithContent:@"hello"];
 
 }
 
 -(void)clickShoutRank:(UITapGestureRecognizer*)sender{
-    
+     NSLog(@"ShoutRank");
 }
 
 -(IBAction)clickBtnGet:(id)sender{
@@ -135,7 +135,7 @@
 }
 
 -(IBAction)clickBtnHold:(id)sender{
-    
+     NSLog(@"Hold");
 }
 
 #pragma mark controlls init
