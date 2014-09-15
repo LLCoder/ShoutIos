@@ -112,7 +112,7 @@
 -(void)clickShare:(UITapGestureRecognizer*)sender{
     
     NSLog(@"share");
-    //[[ShareManager sharedInstance]shareWithContent:@"hello"];
+    [[ShareManager sharedInstance]shareWithContent:@"hello"];
 
 }
 
