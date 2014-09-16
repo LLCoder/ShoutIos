@@ -119,6 +119,10 @@
 		FC6BDCC919C40DF7009058C7 /* chuangketie.png in Resources */ = {isa = PBXBuildFile; fileRef = FC6BDCC519C40DF7009058C7 /* chuangketie.png */; };
 		FC6BDCCA19C40DF7009058C7 /* loveHeart.png in Resources */ = {isa = PBXBuildFile; fileRef = FC6BDCC619C40DF7009058C7 /* loveHeart.png */; };
 		FC6BDCCB19C40DF7009058C7 /* loveHeartBg.png in Resources */ = {isa = PBXBuildFile; fileRef = FC6BDCC719C40DF7009058C7 /* loveHeartBg.png */; };
+		FC8B219F19C8202200B544C4 /* VentBrowseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8B219D19C8202200B544C4 /* VentBrowseViewController.m */; };
+		FC8B21A019C8202200B544C4 /* VentBrowseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC8B219E19C8202200B544C4 /* VentBrowseViewController.xib */; };
+		FC8B21A319C829BA00B544C4 /* cry.png in Resources */ = {isa = PBXBuildFile; fileRef = FC8B21A119C829BA00B544C4 /* cry.png */; };
+		FC8B21A419C829BA00B544C4 /* smile.png in Resources */ = {isa = PBXBuildFile; fileRef = FC8B21A219C829BA00B544C4 /* smile.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -290,6 +294,11 @@
 		FC6BDCC519C40DF7009058C7 /* chuangketie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chuangketie.png; sourceTree = "<group>"; };
 		FC6BDCC619C40DF7009058C7 /* loveHeart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loveHeart.png; sourceTree = "<group>"; };
 		FC6BDCC719C40DF7009058C7 /* loveHeartBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loveHeartBg.png; sourceTree = "<group>"; };
+		FC8B219C19C8202200B544C4 /* VentBrowseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VentBrowseViewController.h; sourceTree = "<group>"; };
+		FC8B219D19C8202200B544C4 /* VentBrowseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VentBrowseViewController.m; sourceTree = "<group>"; };
+		FC8B219E19C8202200B544C4 /* VentBrowseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VentBrowseViewController.xib; sourceTree = "<group>"; };
+		FC8B21A119C829BA00B544C4 /* cry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cry.png; sourceTree = "<group>"; };
+		FC8B21A219C829BA00B544C4 /* smile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = smile.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -663,6 +672,9 @@
 				FC67B1BB19C44F60002227AB /* VentViewController.h */,
 				FC67B1BC19C44F60002227AB /* VentViewController.m */,
 				FC67B1BD19C44F60002227AB /* VentViewController.xib */,
+				FC8B219C19C8202200B544C4 /* VentBrowseViewController.h */,
+				FC8B219D19C8202200B544C4 /* VentBrowseViewController.m */,
+				FC8B219E19C8202200B544C4 /* VentBrowseViewController.xib */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -670,6 +682,8 @@
 		FC5F4F0219C1830A00385F3A /* Res */ = {
 			isa = PBXGroup;
 			children = (
+				FC8B21A119C829BA00B544C4 /* cry.png */,
+				FC8B21A219C829BA00B544C4 /* smile.png */,
 				FC67B1C019C45380002227AB /* backArrow.png */,
 				FC67B1C119C45380002227AB /* gb.png */,
 				FC67B1C219C45380002227AB /* tempText.jpg */,
@@ -764,6 +778,7 @@
 				FC5F4F0A19C1834B00385F3A /* Icon.png in Resources */,
 				EF69F0FB19C705DC0065A54F /* RennSDK.bundle in Resources */,
 				FC5F4F1719C1AC8000385F3A /* pageO.png in Resources */,
+				FC8B21A319C829BA00B544C4 /* cry.png in Resources */,
 				FC6BDCC819C40DF7009058C7 /* btnUseBg.png in Resources */,
 				FC5F4F1819C1AC8000385F3A /* sentenceImg.png in Resources */,
 				FC1466E219C02EF100A2CFEC /* BaseViewController.xib in Resources */,
@@ -774,7 +789,9 @@
 				FC5F4F0F19C18CBD00385F3A /* MainViewController.xib in Resources */,
 				FC6BDCC119C40921009058C7 /* headBgRound.png in Resources */,
 				EF69F0F619C705DC0065A54F /* ShareSDKFlatShareViewUI.bundle in Resources */,
+				FC8B21A019C8202200B544C4 /* VentBrowseViewController.xib in Resources */,
 				FC5F4F1919C1AC8000385F3A /* sentenceTextBg.png in Resources */,
+				FC8B21A419C829BA00B544C4 /* smile.png in Resources */,
 				EF3526AE19BC8E9F006A5521 /* InfoPlist.strings in Resources */,
 				FC5F4F1A19C1AC8000385F3A /* shareBg.png in Resources */,
 				FC67B1C519C45380002227AB /* gb.png in Resources */,
@@ -821,6 +838,7 @@
 				EF35270F19BC9AAF006A5521 /* NetworkModel.m in Sources */,
 				EF73035419BD8F4D00656F85 /* LoginModel.m in Sources */,
 				EFB849CE19C3E5EC00F2E0FA /* MainModel.m in Sources */,
+				FC8B219F19C8202200B544C4 /* VentBrowseViewController.m in Sources */,
 				EF73033919BD85B900656F85 /* RequestLogin.m in Sources */,
 				EF3526F819BC9882006A5521 /* ASIHTTPRequest.m in Sources */,
 				EF35272519BCA606006A5521 /* KBJSONSerializing.m in Sources */,

@@ -21,17 +21,15 @@
     // Override point for customization after application launch.
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    [application setStatusBarStyle:UIStatusBarStyleLightContent];
-    //self.window.backgroundColor = [UIColor whiteColor];
-//    if (IOS7_OR_LATER)
-//    {
-//        [application setStatusBarStyle:UIStatusBarStyleLightContent];
-//        //[application setStatusBarHidden:NO withAnimation:UIStatusBarAnimationFade];
+    self.window.backgroundColor = [UIColor whiteColor];
+    if (IOS7_OR_LATER)
+    {
+        [application setStatusBarStyle:UIStatusBarStyleLightContent];
 //        self.window.clipsToBounds =YES;
 //        self.window.frame =  CGRectMake(0,20,self.window.frame.size.width,self.window.frame.size.height-20);
 //        //Added on 19th Sep 2013
 //        self.window.bounds = CGRectMake(0, 20, self.window.frame.size.width, self.window.frame.size.height);
-//    }
+    }
     if (nil == [PublicFunction isFirst]
         || ![[PublicFunction isFirst] isEqualToString:@"1"]) {
         [self goWelcomeController];

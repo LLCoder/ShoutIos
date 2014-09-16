@@ -130,7 +130,6 @@
     VentViewController* lc = [[VentViewController alloc] initWithNibName:@"VentViewController" bundle:nil];
     //lc.strNavTitle = @"获取";
     self.showView = view_Tucao;
-    lc.bShowBack = YES;
     [self.navigationController pushViewController:lc animated:YES];
 }
 
