@@ -57,6 +57,15 @@
     [tfPw resignFirstResponder];
 }
 
+-(IBAction)clickButton :(UIButton*)sender{
+    if (331 ==sender.tag ) {
+        // qq
+    }
+    else if(332 == sender.tag){
+        // weibo
+    }
+}
+
 - (BOOL)conditionsCheck{
     BOOL result = YES;
     
@@ -99,7 +108,7 @@
         return;
     }
     
-    
+    [PublicFunction showActivityIndicatorInView:self.view];
     [[LoginModel sharedInstance]loginWithMemberTel:tfNumber.text password:tfPw.text resultBlock:^(NSString *errorStr) {
         if (nil == errorStr) {
             [[PublicFunction appDelegate] goMainViewController];

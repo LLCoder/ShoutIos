@@ -123,6 +123,13 @@
 		FC8B21A019C8202200B544C4 /* VentBrowseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC8B219E19C8202200B544C4 /* VentBrowseViewController.xib */; };
 		FC8B21A319C829BA00B544C4 /* cry.png in Resources */ = {isa = PBXBuildFile; fileRef = FC8B21A119C829BA00B544C4 /* cry.png */; };
 		FC8B21A419C829BA00B544C4 /* smile.png in Resources */ = {isa = PBXBuildFile; fileRef = FC8B21A219C829BA00B544C4 /* smile.png */; };
+		FCCA1D6119C9958A00035743 /* btnLogin.png in Resources */ = {isa = PBXBuildFile; fileRef = FCCA1D5A19C9958900035743 /* btnLogin.png */; };
+		FCCA1D6219C9958A00035743 /* btnRegister.png in Resources */ = {isa = PBXBuildFile; fileRef = FCCA1D5B19C9958900035743 /* btnRegister.png */; };
+		FCCA1D6319C9958A00035743 /* phoneBg.png in Resources */ = {isa = PBXBuildFile; fileRef = FCCA1D5C19C9958900035743 /* phoneBg.png */; };
+		FCCA1D6419C9958A00035743 /* pwdBg.png in Resources */ = {isa = PBXBuildFile; fileRef = FCCA1D5D19C9958900035743 /* pwdBg.png */; };
+		FCCA1D6519C9958A00035743 /* qqLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = FCCA1D5E19C9958900035743 /* qqLogo.png */; };
+		FCCA1D6619C9958A00035743 /* ventLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = FCCA1D5F19C9958900035743 /* ventLogo.png */; };
+		FCCA1D6719C9958A00035743 /* weiboLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = FCCA1D6019C9958900035743 /* weiboLogo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -299,6 +306,13 @@
 		FC8B219E19C8202200B544C4 /* VentBrowseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VentBrowseViewController.xib; sourceTree = "<group>"; };
 		FC8B21A119C829BA00B544C4 /* cry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cry.png; sourceTree = "<group>"; };
 		FC8B21A219C829BA00B544C4 /* smile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = smile.png; sourceTree = "<group>"; };
+		FCCA1D5A19C9958900035743 /* btnLogin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btnLogin.png; sourceTree = "<group>"; };
+		FCCA1D5B19C9958900035743 /* btnRegister.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btnRegister.png; sourceTree = "<group>"; };
+		FCCA1D5C19C9958900035743 /* phoneBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = phoneBg.png; sourceTree = "<group>"; };
+		FCCA1D5D19C9958900035743 /* pwdBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pwdBg.png; sourceTree = "<group>"; };
+		FCCA1D5E19C9958900035743 /* qqLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qqLogo.png; sourceTree = "<group>"; };
+		FCCA1D5F19C9958900035743 /* ventLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ventLogo.png; sourceTree = "<group>"; };
+		FCCA1D6019C9958900035743 /* weiboLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = weiboLogo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -682,6 +696,13 @@
 		FC5F4F0219C1830A00385F3A /* Res */ = {
 			isa = PBXGroup;
 			children = (
+				FCCA1D5A19C9958900035743 /* btnLogin.png */,
+				FCCA1D5B19C9958900035743 /* btnRegister.png */,
+				FCCA1D5C19C9958900035743 /* phoneBg.png */,
+				FCCA1D5D19C9958900035743 /* pwdBg.png */,
+				FCCA1D5E19C9958900035743 /* qqLogo.png */,
+				FCCA1D5F19C9958900035743 /* ventLogo.png */,
+				FCCA1D6019C9958900035743 /* weiboLogo.png */,
 				FC8B21A119C829BA00B544C4 /* cry.png */,
 				FC8B21A219C829BA00B544C4 /* smile.png */,
 				FC67B1C019C45380002227AB /* backArrow.png */,
@@ -770,6 +791,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC5F4F1B19C1AC8000385F3A /* shareIcon.png in Resources */,
+				FCCA1D6619C9958A00035743 /* ventLogo.png in Resources */,
 				FC67B1AB19C42BF4002227AB /* GetViewController.xib in Resources */,
 				EF69F0F219C705DC0065A54F /* ShareSDKLocalizable.strings in Resources */,
 				EF3526BC19BC8E9F006A5521 /* Images.xcassets in Resources */,
@@ -777,6 +799,7 @@
 				FC1466E819C035C700A2CFEC /* LoginNibViewController.xib in Resources */,
 				FC5F4F0A19C1834B00385F3A /* Icon.png in Resources */,
 				EF69F0FB19C705DC0065A54F /* RennSDK.bundle in Resources */,
+				FCCA1D6319C9958A00035743 /* phoneBg.png in Resources */,
 				FC5F4F1719C1AC8000385F3A /* pageO.png in Resources */,
 				FC8B21A319C829BA00B544C4 /* cry.png in Resources */,
 				FC6BDCC819C40DF7009058C7 /* btnUseBg.png in Resources */,
@@ -793,10 +816,14 @@
 				FC5F4F1919C1AC8000385F3A /* sentenceTextBg.png in Resources */,
 				FC8B21A419C829BA00B544C4 /* smile.png in Resources */,
 				EF3526AE19BC8E9F006A5521 /* InfoPlist.strings in Resources */,
+				FCCA1D6719C9958A00035743 /* weiboLogo.png in Resources */,
 				FC5F4F1A19C1AC8000385F3A /* shareBg.png in Resources */,
 				FC67B1C519C45380002227AB /* gb.png in Resources */,
 				FC67B1C619C45380002227AB /* tempText.jpg in Resources */,
+				FCCA1D6419C9958A00035743 /* pwdBg.png in Resources */,
+				FCCA1D6219C9958A00035743 /* btnRegister.png in Resources */,
 				FC6BDCC919C40DF7009058C7 /* chuangketie.png in Resources */,
+				FCCA1D6519C9958A00035743 /* qqLogo.png in Resources */,
 				FC6BDCC219C40921009058C7 /* holdBg.png in Resources */,
 				FC67B1C719C45380002227AB /* tipBg.png in Resources */,
 				FC6BDCC019C40921009058C7 /* headBg.png in Resources */,
@@ -805,6 +832,7 @@
 				FC67B1BF19C44F60002227AB /* VentViewController.xib in Resources */,
 				FC67B1B519C42D04002227AB /* freeIcon.png in Resources */,
 				EF69F0FE19C705DC0065A54F /* WeiboSDK.bundle in Resources */,
+				FCCA1D6119C9958A00035743 /* btnLogin.png in Resources */,
 				FC67B1B919C42D04002227AB /* signIcon.png in Resources */,
 				FC5F4F1619C1AC8000385F3A /* pageC.png in Resources */,
 				FC5F4F0019C17D1E00385F3A /* WelcomeViewController.xib in Resources */,

@@ -35,7 +35,7 @@
         [self goWelcomeController];
     }
     else{
-        [self goMainViewController];
+        [self goLoginController];
     }
     
     //第三方分享

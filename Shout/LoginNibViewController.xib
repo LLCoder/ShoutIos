@@ -9,7 +9,7 @@
             <connections>
                 <outlet property="btnLogin" destination="Kco-Q0-4LG" id="eTa-Tg-gQr"/>
                 <outlet property="btnRegister" destination="AXB-dj-SGK" id="AJc-HP-Ihh"/>
-                <outlet property="ivInputBg" destination="Hdr-aY-vZc" id="Zix-E4-qO5"/>
+                <outlet property="ivInputBg" destination="J0o-5g-lja" id="fQN-dv-gz6"/>
                 <outlet property="tfNumber" destination="P8P-GG-yos" id="qJc-Uu-zKm"/>
                 <outlet property="tfPw" destination="MhF-oM-Zqp" id="rIX-0h-gmf"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -31,26 +31,22 @@
                         <action selector="clickBg:" destination="-1" eventType="touchUpInside" id="ROQ-gD-9gW"/>
                     </connections>
                 </button>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Hdr-aY-vZc">
-                    <rect key="frame" x="30" y="111" width="260" height="128"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </imageView>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="手机号码" minimumFontSize="17" id="P8P-GG-yos">
-                    <rect key="frame" x="33" y="123" width="254" height="48"/>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   手机号码" minimumFontSize="17" background="phoneBg.png" id="P8P-GG-yos">
+                    <rect key="frame" x="24" y="161" width="273" height="45"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="19"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="密码" minimumFontSize="17" id="MhF-oM-Zqp">
-                    <rect key="frame" x="33" y="179" width="254" height="49"/>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   密码" minimumFontSize="17" background="pwdBg.png" id="MhF-oM-Zqp">
+                    <rect key="frame" x="24" y="206" width="274" height="45"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="19"/>
                     <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                 </textField>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="AXB-dj-SGK">
-                    <rect key="frame" x="33" y="292" width="120" height="44"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="AXB-dj-SGK">
+                    <rect key="frame" x="24" y="292" width="121" height="37"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="注册">
+                    <state key="normal" title="注册" backgroundImage="btnRegister.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -58,19 +54,62 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Kco-Q0-4LG">
-                    <rect key="frame" x="167" y="292" width="120" height="44"/>
+                    <rect key="frame" x="176" y="292" width="121" height="37"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="登陆">
+                    <state key="normal" title="登陆" backgroundImage="btnLogin.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
                         <action selector="btnLoginClick:" destination="-1" eventType="touchUpInside" id="B18-mb-irg"/>
                     </connections>
                 </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qqLogo.png" id="rLi-8F-KNm">
+                    <rect key="frame" x="24" y="402" width="20" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="weiboLogo.png" id="bOv-Ui-O3w">
+                    <rect key="frame" x="211" y="402" width="20" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <button opaque="NO" tag="331" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="gcM-S4-Rvc">
+                    <rect key="frame" x="47" y="397" width="61" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="QQ登陆">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="clickButton:" destination="-1" eventType="touchUpInside" id="Qqs-Ru-had"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="332" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xRf-b9-4J1">
+                    <rect key="frame" x="236" y="397" width="61" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="微博登陆">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="clickButton:" destination="-1" eventType="touchUpInside" id="6aN-ts-paY"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ventLogo.png" id="J0o-5g-lja">
+                    <rect key="frame" x="121" y="74" width="79" height="79"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
             </subviews>
-            <color key="backgroundColor" red="0.38267200400000001" green="0.72105718500000004" blue="0.98072814939999997" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.0" green="0.57254904508590698" blue="0.91764712333679199" alpha="1" colorSpace="deviceRGB"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
     </objects>
+    <resources>
+        <image name="btnLogin.png" width="242" height="74"/>
+        <image name="btnRegister.png" width="242" height="74"/>
+        <image name="phoneBg.png" width="546" height="90"/>
+        <image name="pwdBg.png" width="546" height="90"/>
+        <image name="qqLogo.png" width="37" height="38"/>
+        <image name="ventLogo.png" width="158" height="157"/>
+        <image name="weiboLogo.png" width="47" height="38"/>
+    </resources>
 </document>
