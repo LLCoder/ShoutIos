@@ -43,6 +43,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     //self.navigationController.navigationBarHidden = YES;
+    
+    if ([[LoginModel sharedInstance] memberId]
+        && [[LoginModel sharedInstance] memberTel]) {
+        [[PublicFunction appDelegate] performSelector:@selector(goMainViewController) withObject:nil afterDelay:0.1];
+    }
 }
 
 - (void)didReceiveMemoryWarning

@@ -11,7 +11,7 @@
 #import "VentViewController.h"
 #import <ShareSDK/ShareSDK.h>
 #import "ShareManager.h"
-
+#import "EVCircularProgressView.h"
 
 #define k_ViewControl_Counts    3
 
@@ -27,7 +27,11 @@
     IBOutlet UIImageView* imgShare;
     IBOutlet UIImageView* imgRank;
     
+    IBOutlet UIButton* btnHold;
+    IBOutlet EVCircularProgressView* cricularView;
+    
 }
+
 -(void)clickShare:(UITapGestureRecognizer*)sender;
 -(void)clickShoutRank:(UITapGestureRecognizer*)sender;
 -(IBAction)clickBtnGet:(id)sender;
@@ -66,6 +70,7 @@
         rect.origin.y += 80;//k_Height_IOS7_Move;
         pageCtrl.frame = rect;
     }
+    cricularView.progress = 0;
     
     mainScroll.pagingEnabled = YES;
     if ([pageCtrl respondsToSelector:@selector(setCurrentPageIndicatorTintColor:)]
@@ -73,6 +78,13 @@
         pageCtrl.currentPageIndicatorTintColor = [UIColor blueColor];
         pageCtrl.pageIndicatorTintColor = [UIColor lightGrayColor];
     }
+    
+    // Set record start action for UIControlEventTouchDown
+    [btnHold addTarget:self action:@selector(recordStart) forControlEvents:UIControlEventTouchDown];
+    // Set record end action for UIControlEventTouchUpInside
+    [btnHold addTarget:self action:@selector(recordEnd) forControlEvents:UIControlEventTouchUpInside];
+    // Set record cancel action for UIControlEventTouchUpOutside
+    [btnHold addTarget:self action:@selector(recordCancel) forControlEvents:UIControlEventTouchUpOutside];
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickShare:)];
     tap.delegate = self;
@@ -135,6 +147,31 @@
 
 -(IBAction)clickBtnHold:(id)sender{
      NSLog(@"Hold");
+}
+
+-(void) recordStart
+{
+}
+
+-(void) recordEnd
+{
+    cricularView.progress = 0;
+  [NSTimer scheduledTimerWithTimeInterval:0.02 target:self selector:@selector(updateProgress:) userInfo:nil repeats:YES];
+}
+
+-(void) recordCancel
+{
+  
+}
+
+
+- (void)updateProgress:(NSTimer *)timer
+{
+    if (cricularView.progress == 1) {
+        [timer invalidate];
+    } else {
+        [cricularView setProgress:cricularView.progress + 0.01  animated:YES];
+    }
 }
 
 #pragma mark controlls init

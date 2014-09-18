@@ -78,6 +78,7 @@
 		EFB849D819C4533A00F2E0FA /* RankingEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = EFB849D719C4533A00F2E0FA /* RankingEntity.m */; };
 		EFD94FD519BDD8B800A68467 /* BLTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD94FD419BDD8B800A68467 /* BLTipView.m */; };
 		EFD94FD719BDE37900A68467 /* errorMsg.plist in Resources */ = {isa = PBXBuildFile; fileRef = EFD94FD619BDE37900A68467 /* errorMsg.plist */; };
+		FC11E4EC19CAB51F00882D9F /* EVCircularProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC11E4EB19CAB51F00882D9F /* EVCircularProgressView.m */; };
 		FC1466E119C02EF100A2CFEC /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1466DF19C02EF100A2CFEC /* BaseViewController.m */; };
 		FC1466E219C02EF100A2CFEC /* BaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC1466E019C02EF100A2CFEC /* BaseViewController.xib */; };
 		FC1466E719C035C700A2CFEC /* LoginNibViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1466E519C035C700A2CFEC /* LoginNibViewController.m */; };
@@ -254,6 +255,8 @@
 		EFD94FD319BDD8B800A68467 /* BLTipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLTipView.h; sourceTree = "<group>"; };
 		EFD94FD419BDD8B800A68467 /* BLTipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLTipView.m; sourceTree = "<group>"; };
 		EFD94FD619BDE37900A68467 /* errorMsg.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = errorMsg.plist; sourceTree = "<group>"; };
+		FC11E4EA19CAB51F00882D9F /* EVCircularProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EVCircularProgressView.h; sourceTree = "<group>"; };
+		FC11E4EB19CAB51F00882D9F /* EVCircularProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EVCircularProgressView.m; sourceTree = "<group>"; };
 		FC1466DE19C02EF100A2CFEC /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		FC1466DF19C02EF100A2CFEC /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		FC1466E019C02EF100A2CFEC /* BaseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BaseViewController.xib; sourceTree = "<group>"; };
@@ -441,6 +444,8 @@
 		EF3526DA19BC9882006A5521 /* ThirdTools */ = {
 			isa = PBXGroup;
 			children = (
+				FC11E4EA19CAB51F00882D9F /* EVCircularProgressView.h */,
+				FC11E4EB19CAB51F00882D9F /* EVCircularProgressView.m */,
 				EF83180A19C34881003E9DCE /* ShareSDK */,
 				EF3526DB19BC9882006A5521 /* ASIHTTP */,
 				EF3526F019BC9882006A5521 /* Reachability */,
@@ -862,6 +867,7 @@
 				EF35271019BC9AAF006A5521 /* AppRequest.m in Sources */,
 				FC67B1BE19C44F60002227AB /* VentViewController.m in Sources */,
 				FC5F4EFF19C17D1E00385F3A /* WelcomeViewController.m in Sources */,
+				FC11E4EC19CAB51F00882D9F /* EVCircularProgressView.m in Sources */,
 				EF73034219BD865F00656F85 /* RequestMessage.m in Sources */,
 				EF35270F19BC9AAF006A5521 /* NetworkModel.m in Sources */,
 				EF73035419BD8F4D00656F85 /* LoginModel.m in Sources */,

@@ -10,6 +10,10 @@
 #import "RequestLogin.h"
 #import "RequestRegister.h"
 
+#define k_shoutMemberId     @"shout.memberid"
+#define k_shoutMemberTel     @"shout.membertel"
+#define k_shoutMemberName     @"shout.membername"
+
 @interface LoginModel(){
     NSString *_memberId;
     NSString *_memberTel;
@@ -23,34 +27,35 @@ DEFINE_SINGLETON_FOR_CLASS(LoginModel)
 
 - (NSString *)memberId{
     if (!ISEXISTSTR(_memberId)) {
-        _memberId = [PublicFunction objFromUserDefaultWithKey:@"shout.memberid"];
+        _memberId = [PublicFunction objFromUserDefaultWithKey:k_shoutMemberId];
     }
     return _memberId;
 }
 
 - (NSString *)memberTel{
     if (!ISEXISTSTR(_memberTel)) {
-        _memberTel = [PublicFunction objFromUserDefaultWithKey:@"shout.membertel"];
+        _memberTel = [PublicFunction objFromUserDefaultWithKey:k_shoutMemberTel];
     }
     return _memberTel;
 }
 
 - (NSString *)memberName{
     if (!ISEXISTSTR(_memberName)) {
-        _memberName = [PublicFunction objFromUserDefaultWithKey:@"shout.membername"];
+        _memberName = [PublicFunction objFromUserDefaultWithKey:k_shoutMemberName];
     }
     return _memberName;
 }
 
+
 - (void)saveLoginData:(LoginRst *)loginData{
     _memberId = loginData.memberId;
-    [PublicFunction saveToUserDefault:_memberId withKey:@"shout.memberid"];
+    [PublicFunction saveToUserDefault:_memberId withKey:k_shoutMemberId];
     
     _memberTel = loginData.memberTel;
-    [PublicFunction saveToUserDefault:_memberTel withKey:@"shout.membertel"];
+    [PublicFunction saveToUserDefault:_memberTel withKey:k_shoutMemberTel];
     
     _memberName = loginData.memberName;
-    [PublicFunction saveToUserDefault:_memberName withKey:@"shout.membername"];
+    [PublicFunction saveToUserDefault:_memberName withKey:k_shoutMemberName];
 }
 
 - (void)loginWithMemberTel:(NSString *)memberTel password:(NSString *)pwd resultBlock:(void(^)(NSString * errorStr)) resultBlock{

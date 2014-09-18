@@ -18,4 +18,7 @@ DEFINE_SINGLETON_FOR_HEADER(LoginModel)
 - (void)loginWithMemberTel:(NSString *)memberTel password:(NSString *)pwd resultBlock:(void(^)(NSString * errorStr)) resultBlock;
 
 - (void)registerWithMemberTel:(NSString *)memberTel password:(NSString *)pwd resultBlock:(void(^)(NSString * errorStr)) resultBlock;
+
+- (NSString *)memberTel;
+- (NSString *)memberId;
 @end
