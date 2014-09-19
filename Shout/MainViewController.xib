@@ -11,6 +11,12 @@
                 <outlet property="cricularView" destination="gI6-p9-A05" id="BN5-ix-ftJ"/>
                 <outlet property="imgRank" destination="yZj-s3-tcg" id="ef4-dq-qr3"/>
                 <outlet property="imgShare" destination="0KS-Y5-WT4" id="00D-j7-fKG"/>
+                <outlet property="ivSenContent" destination="OI5-GZ-77N" id="J7u-L4-eCE"/>
+                <outlet property="ivSenIcon" destination="tn7-MF-xvC" id="iNC-7J-rZO"/>
+                <outlet property="ivShareIcon" destination="pDM-Jz-gmv" id="H6t-R1-PpS"/>
+                <outlet property="labDebicelValue" destination="dhk-MX-TTE" id="TJE-em-bTm"/>
+                <outlet property="labSenContent" destination="m2C-Z8-DZK" id="uAm-xH-jvA"/>
+                <outlet property="labShareLab" destination="avl-Jh-hsX" id="Yya-eT-m3c"/>
                 <outlet property="mainScroll" destination="Dud-gn-Loo" id="j3O-fC-Jkj"/>
                 <outlet property="pageCtrl" destination="nAJ-dx-9eC" id="wMa-pz-eqk"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>

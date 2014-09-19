@@ -49,6 +49,14 @@
     
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
     
+    if (kScreenIs4InchRetina) { // height 1136
+        
+        
+        [BaseViewController adjustmentSizeFor4Inch:viewBg forSize:80];
+        
+        [BaseViewController adjustmentPositionYFor4Inch:imgBottomTip distance:80];
+    }
+    
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickBg:)];
     tap.delegate = self;
     viewBg.userInteractionEnabled = YES;

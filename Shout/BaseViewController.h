@@ -26,4 +26,12 @@
 -(void)setNavTitle:(NSString*)str;
 -(void)setRightButtonImage:(NSString*)str;
 
+
++(void)adjustmentSizeFor4Inch:(UIView*)aView forSize:(float)fSize;
++(void)adjustmentSizeFor4Inch:(UIView*)aView;
++(void)adjustmentPositionYFor4Inch:(UIView*)aView distance:(float)fd;
++(void)adjustmentPositionYFor4Inch:(UIView*)aView
+                          distance:(float)fd
+                        addOrMinus:(BOOL)bAdd;
+
 @end

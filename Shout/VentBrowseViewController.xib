@@ -10,6 +10,7 @@
                 <outlet property="labContent" destination="fTY-O4-9Fs" id="Uwf-Dg-C3s"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="viewCry" destination="uEE-BT-hF6" id="4aI-lw-xxC"/>
+                <outlet property="viewLabBg" destination="ZqE-h1-LlN" id="QwN-QP-rZ5"/>
                 <outlet property="viewSmile" destination="jHE-rq-hlR" id="2bs-Dc-zZW"/>
             </connections>
         </placeholder>

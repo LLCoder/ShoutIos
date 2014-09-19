@@ -131,6 +131,7 @@
 		FCCA1D6519C9958A00035743 /* qqLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = FCCA1D5E19C9958900035743 /* qqLogo.png */; };
 		FCCA1D6619C9958A00035743 /* ventLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = FCCA1D5F19C9958900035743 /* ventLogo.png */; };
 		FCCA1D6719C9958A00035743 /* weiboLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = FCCA1D6019C9958900035743 /* weiboLogo.png */; };
+		FCD5C8DE19CBD46500D28F7A /* RecorderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FCD5C8DD19CBD46500D28F7A /* RecorderManager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -316,6 +317,8 @@
 		FCCA1D5E19C9958900035743 /* qqLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qqLogo.png; sourceTree = "<group>"; };
 		FCCA1D5F19C9958900035743 /* ventLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ventLogo.png; sourceTree = "<group>"; };
 		FCCA1D6019C9958900035743 /* weiboLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = weiboLogo.png; sourceTree = "<group>"; };
+		FCD5C8DC19CBD46500D28F7A /* RecorderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecorderManager.h; sourceTree = "<group>"; };
+		FCD5C8DD19CBD46500D28F7A /* RecorderManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecorderManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -444,6 +447,8 @@
 		EF3526DA19BC9882006A5521 /* ThirdTools */ = {
 			isa = PBXGroup;
 			children = (
+				FCD5C8DC19CBD46500D28F7A /* RecorderManager.h */,
+				FCD5C8DD19CBD46500D28F7A /* RecorderManager.m */,
 				FC11E4EA19CAB51F00882D9F /* EVCircularProgressView.h */,
 				FC11E4EB19CAB51F00882D9F /* EVCircularProgressView.m */,
 				EF83180A19C34881003E9DCE /* ShareSDK */,
@@ -901,6 +906,7 @@
 				EFB849D219C3E6A400F2E0FA /* SentenceEntity.m in Sources */,
 				EFD94FD519BDD8B800A68467 /* BLTipView.m in Sources */,
 				EF35270D19BC9AAF006A5521 /* Data_Struct.m in Sources */,
+				FCD5C8DE19CBD46500D28F7A /* RecorderManager.m in Sources */,
 				EF3526F619BC9882006A5521 /* ASIDownloadCache.m in Sources */,
 				FC67B1AA19C42BF4002227AB /* GetViewController.m in Sources */,
 				EF73033C19BD861D00656F85 /* RequestOneSentence.m in Sources */,
@@ -1007,6 +1013,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: ChangJun Ji (BR758MU3LC)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Shout/ThirdTools/ShareSDK/Connection",

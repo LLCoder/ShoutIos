@@ -13,6 +13,8 @@
     IBOutlet UILabel* labContent;
     IBOutlet UIView* viewCry;
     IBOutlet UIView* viewSmile;
+    
+    IBOutlet UIView* viewLabBg;
 }
 
 -(IBAction)clickBack:(id)sender;
@@ -36,6 +38,15 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    if (kScreenIs4InchRetina) { // height 1136
+        
+        
+        [BaseViewController adjustmentSizeFor4Inch:viewLabBg forSize:80];
+        
+        [BaseViewController adjustmentPositionYFor4Inch:viewCry distance:80];
+        [BaseViewController adjustmentPositionYFor4Inch:viewSmile distance:80];
+    }
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickCry:)];
     tap.delegate = self;

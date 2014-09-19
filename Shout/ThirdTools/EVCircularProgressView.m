@@ -122,11 +122,11 @@
         
         [self stopIndeterminateAnimation];
         
-        self.shapeLayer.lineWidth = 12;
+        self.shapeLayer.lineWidth = 8;
         
         self.shapeLayer.path = [UIBezierPath bezierPathWithArcCenter:CGPointMake(CGRectGetMidX(self.bounds), CGRectGetMidY(self.bounds))
                                                               radius:self.bounds.size.width/2 - 2
-                                                          startAngle:3*M_PI_2
+                                                          startAngle:0.2*M_PI
                                                             endAngle:3*M_PI_2 + 2*M_PI
                                                            clockwise:YES].CGPath;
         
@@ -226,6 +226,9 @@
 
 - (void)stopIndeterminateAnimation
 {
+    if (!self.showIndeterminateAnimation) {
+        return;
+    }
     [self.shapeLayer removeAnimationForKey:@"indeterminateAnimation"];
     
     [CATransaction begin];

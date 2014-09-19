@@ -12,8 +12,11 @@
 #import <ShareSDK/ShareSDK.h>
 #import "ShareManager.h"
 #import "EVCircularProgressView.h"
+#import "RecorderManager.h"
 
 #define k_ViewControl_Counts    3
+
+#define k_DebicelMaxValue       12000.0
 
 @interface MainViewController ()
 {
@@ -29,8 +32,19 @@
     
     IBOutlet UIButton* btnHold;
     IBOutlet EVCircularProgressView* cricularView;
+    IBOutlet UILabel* labDebicelValue;
     
-    NSInteger currentDebicel;
+    
+    IBOutlet UIImageView* ivSenIcon;
+    IBOutlet UIImageView* ivSenContent;
+    IBOutlet UILabel* labSenContent;
+    
+    IBOutlet UIImageView* ivShareIcon;
+    IBOutlet UILabel* labShareLab;
+    
+    NSInteger currentDebicelCount;
+    
+    NSThread* threadRecorder;
 }
 
 -(void)clickShare:(UITapGestureRecognizer*)sender;
@@ -38,6 +52,8 @@
 -(IBAction)clickBtnGet:(id)sender;
 -(IBAction)clickBtnUse:(id)sender;
 -(IBAction)clickBtnHold:(id)sender;
+
+-(void)updateCricularByDebicel:(CGFloat)tDebicel;
 @end
 
 @implementation MainViewController
@@ -70,9 +86,17 @@
         CGRect rect = pageCtrl.frame;
         rect.origin.y += 80;//k_Height_IOS7_Move;
         pageCtrl.frame = rect;
+        
+        [BaseViewController adjustmentSizeFor4Inch:ivSenIcon forSize:30];
+//        [BaseViewController adjustmentPositionYFor4Inch:ivSenContent distance:(1136-960)/2-10];
+                [BaseViewController adjustmentPositionYFor4Inch:ivSenContent distance:50];
+        [BaseViewController adjustmentPositionYFor4Inch:labSenContent distance:50];
+        
+        [BaseViewController adjustmentPositionYFor4Inch:ivShareIcon distance:50];
+        [BaseViewController adjustmentPositionYFor4Inch:imgShare distance:50];
+        [BaseViewController adjustmentPositionYFor4Inch:labShareLab distance:50];
     }
-    cricularView.progress = 0;
-    
+   
     mainScroll.pagingEnabled = YES;
     if ([pageCtrl respondsToSelector:@selector(setCurrentPageIndicatorTintColor:)]
         && [pageCtrl respondsToSelector:@selector(setPageIndicatorTintColor:)]) {
@@ -96,6 +120,14 @@
     tapRank.delegate = self;
     imgRank.userInteractionEnabled = YES;
     [imgRank addGestureRecognizer:tapRank];
+    
+    [RecorderManager sharedInstance].decibelBlock = ^(CGFloat decibel){
+        
+        [self updateCricularByDebicel:decibel];
+    };
+    currentDebicelCount = 1000;
+    labDebicelValue.text = [NSString stringWithFormat:@"%d", currentDebicelCount];
+     cricularView.progress = currentDebicelCount/k_DebicelMaxValue;
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -150,25 +182,36 @@
      NSLog(@"Hold");
 }
 
+-(void)updateCricularByDebicel:(CGFloat)tDebicel{
+    
+    int iDebicel = fabsf(tDebicel)*100;
+    
+    currentDebicelCount += iDebicel;
+    
+    if (currentDebicelCount > k_DebicelMaxValue) {
+        NSLog(@" 爆表！！！ %d", currentDebicelCount);
+    }
+     printf("iDebicel = %d, currentDebicelCount = %d\n", iDebicel,currentDebicelCount);
+    
+    labDebicelValue.text = [NSString stringWithFormat:@"%d", currentDebicelCount];
+    cricularView.progress = currentDebicelCount/k_DebicelMaxValue;
+    [cricularView setProgress:cricularView.progress animated:YES];
+}
+
 -(void) recordStart
 {
-    if (1 <= cricularView.progress) {
-        cricularView.progress = 0;
-    }
-    [cricularView setProgress:cricularView.progress + 0.1  animated:YES];
+    currentDebicelCount = 1000;
+    [[RecorderManager sharedInstance] startRecorder:nil];
 }
 
 -(void) recordEnd
 {
-//    cricularView.progress = 0;
-//  [NSTimer scheduledTimerWithTimeInterval:0.02 target:self selector:@selector(updateProgress:) userInfo:nil repeats:YES];
-    
-    
+    [[RecorderManager sharedInstance] stopRecorder:nil];
 }
 
 -(void) recordCancel
 {
-  
+  [[RecorderManager sharedInstance] stopRecorder:nil];
 }
 
 

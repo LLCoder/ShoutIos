@@ -35,7 +35,7 @@
                     <rect key="frame" x="24" y="161" width="273" height="45"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   密码" minimumFontSize="17" background="pwdBg.png" id="MhF-oM-Zqp">
                     <rect key="frame" x="24" y="206" width="274" height="45"/>

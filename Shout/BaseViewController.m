@@ -170,4 +170,33 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
++(void)adjustmentSizeFor4Inch:(UIView*)aView{
+    CGRect rect = aView.frame;
+    rect.size.height += (1136-960)/2;
+    aView.frame = rect;
+}
+
++(void)adjustmentSizeFor4Inch:(UIView*)aView forSize:(float)fSize{
+    CGRect rect = aView.frame;
+    rect.size.height += fSize;
+    aView.frame = rect;
+}
+
++(void)adjustmentPositionYFor4Inch:(UIView*)aView distance:(float)fd{
+    CGRect rect = aView.frame;
+    rect.origin.y += fd;
+    aView.frame = rect;
+}
+
++(void)adjustmentPositionYFor4Inch:(UIView*)aView
+                          distance:(float)fd
+                        addOrMinus:(BOOL)bAdd{
+    CGRect rect = aView.frame;
+    if (bAdd) {
+        rect.origin.y += fd;
+    }
+    else{rect.origin.y -= fd;}
+    aView.frame = rect;
+}
+
 @end
