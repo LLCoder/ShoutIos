@@ -36,6 +36,10 @@
 
 // Set the value of the progress property, optionally animating the change
 
+
+@property(nonatomic, assign) BOOL showIndeterminateAnimation;
+
 - (void)setProgress:(float)progress animated:(BOOL)animated;
+
 
 @end

@@ -58,7 +58,8 @@
 
 @end
 
-@implementation EVCircularProgressView {
+@implementation EVCircularProgressView
+{
     UIColor *_progressTintColor;
 }
 
@@ -121,7 +122,7 @@
         
         [self stopIndeterminateAnimation];
         
-        self.shapeLayer.lineWidth = 3;
+        self.shapeLayer.lineWidth = 12;
         
         self.shapeLayer.path = [UIBezierPath bezierPathWithArcCenter:CGPointMake(CGRectGetMidX(self.bounds), CGRectGetMidY(self.bounds))
                                                               radius:self.bounds.size.width/2 - 2
@@ -196,6 +197,9 @@
 
 - (void)startIndeterminateAnimation
 {
+    if (!self.showIndeterminateAnimation) {
+        return;
+    }
     [CATransaction begin];
     [CATransaction setDisableActions:YES];
     

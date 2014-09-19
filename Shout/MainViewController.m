@@ -30,6 +30,7 @@
     IBOutlet UIButton* btnHold;
     IBOutlet EVCircularProgressView* cricularView;
     
+    NSInteger currentDebicel;
 }
 
 -(void)clickShare:(UITapGestureRecognizer*)sender;
@@ -151,12 +152,18 @@
 
 -(void) recordStart
 {
+    if (1 <= cricularView.progress) {
+        cricularView.progress = 0;
+    }
+    [cricularView setProgress:cricularView.progress + 0.1  animated:YES];
 }
 
 -(void) recordEnd
 {
-    cricularView.progress = 0;
-  [NSTimer scheduledTimerWithTimeInterval:0.02 target:self selector:@selector(updateProgress:) userInfo:nil repeats:YES];
+//    cricularView.progress = 0;
+//  [NSTimer scheduledTimerWithTimeInterval:0.02 target:self selector:@selector(updateProgress:) userInfo:nil repeats:YES];
+    
+    
 }
 
 -(void) recordCancel
@@ -167,11 +174,11 @@
 
 - (void)updateProgress:(NSTimer *)timer
 {
-    if (cricularView.progress == 1) {
-        [timer invalidate];
-    } else {
-        [cricularView setProgress:cricularView.progress + 0.01  animated:YES];
-    }
+//    if (cricularView.progress == 1) {
+//        [timer invalidate];
+//    } else {
+//        [cricularView setProgress:cricularView.progress + 0.01  animated:YES];
+//    }
 }
 
 #pragma mark controlls init
