@@ -12,6 +12,7 @@
 #import "MainViewController.h"
 #import "ShareManager.h"
 #import "MainModel.h"
+#import "PayofManager.h"
 
 @implementation AppDelegate
 @synthesize mainNav;
@@ -100,6 +101,14 @@
 {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 }
+
+//独立客户端回调函数
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+	
+	[[PayofManager sharedInstance] parse:url application:application];
+	return YES;
+}
+
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {

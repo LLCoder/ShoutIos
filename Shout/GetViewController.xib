@@ -10,6 +10,8 @@
                 <outlet property="labTip" destination="DH0-GN-fVc" id="QVQ-00-fGy"/>
                 <outlet property="tabMenu" destination="0Hx-ZE-LNQ" id="Aeq-gt-Spp"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewBuy" destination="4qg-oQ-IyP" id="Mnz-Tj-C9B"/>
+                <outlet property="viewSign" destination="lhw-u9-mfx" id="4wR-X1-bQb"/>
                 <outlet property="viewTop" destination="4Wx-d6-8JZ" id="UGc-Kl-juE"/>
             </connections>
         </placeholder>

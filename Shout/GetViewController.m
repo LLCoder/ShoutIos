@@ -8,6 +8,7 @@
 
 #import "GetViewController.h"
 #import "MainViewController.h"
+#import "PayofManager.h"
 
 @interface GetViewController ()
 {
@@ -15,6 +16,9 @@
     IBOutlet UIView* viewTop;
     
     IBOutlet UILabel* labTip;
+    
+    IBOutlet UIView* viewBuy;
+    IBOutlet UIView* viewSign;
 }
 @end
 
@@ -33,6 +37,57 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickBuy:)];
+    [viewBuy addGestureRecognizer:tap];
+    SAFERELEASE(tap);
+    
+    tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickSign:)];
+    [viewSign addGestureRecognizer:tap];
+    SAFERELEASE(tap);
+}
+
+// 此方法为生成订单方法  内部可自行实现
+- (NSString *)generateTradeNO
+{
+	const int N = 15;
+	
+	NSString *sourceString = @"0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	NSMutableString *result = [[NSMutableString alloc] init] ;
+	srand(time(0));
+	for (int i = 0; i < N; i++)
+	{
+		unsigned index = rand() % [sourceString length];
+		NSString *s = [sourceString substringWithRange:NSMakeRange(index, 1)];
+		[result appendString:s];
+	}
+	return result;
+}
+
+-(void)clickBuy:(UITapGestureRecognizer*)sender{
+    /*
+     测试代码
+     */
+    
+    modelProduct *product = [[modelProduct alloc] init];
+    product.subject = @"话费充值";
+    product.number = 1;
+    product.body = @"[四钻信誉]北京移动30元 电脑全自动充值 1到10分钟内到账";
+    product.price = 0.01;
+    
+    NSString *appScheme = @"Shout_AliPay_Schemes";
+    [[PayofManager sharedInstance] MMUniPay:product
+                                      order:[self generateTradeNO]
+                                      AppID:@""
+                                     AppKey:@""
+                                    AppName:@"shout"
+                                  AndScheme:appScheme
+                               withDelegate:nil];
+    // end
+}
+
+-(void)clickSign:(UITapGestureRecognizer*)sender{
+    
 }
 
 - (void)didReceiveMemoryWarning
