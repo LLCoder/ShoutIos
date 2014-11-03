@@ -27,7 +27,6 @@
 @property (nonatomic, assign)int requestCode;
 @property (nonatomic, assign)int cmdCode;
 @property (nonatomic, weak)id<HTTP_REC_RESPOND>   modelDelegage;
-@property (nonatomic, assign)int timeoutSeconds;
 @property (nonatomic, assign)BOOL needSessionCheck;
 -(id)initWithURL:(NSURL *)newURL;
 -(void)setReqInfo:(RequestInfoBase *)reqInfo;

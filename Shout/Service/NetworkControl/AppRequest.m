@@ -32,7 +32,7 @@
 	self.requestType = reqInfo.requestType;
 	self.cmdCode = reqInfo.cmdCode;
 	self.modelDelegage = reqInfo.delegate;
-    self.timeoutSeconds = reqInfo.timeoutSeconds;
+    self.timeOutSeconds = reqInfo.timeoutSeconds;
     
     if (ISDICTIONARYCLASS(reqInfo.requestDic) && reqInfo.requestDic.count > 0) {
         [self setRequestMethod:HTTP_METHOD_POST];
@@ -52,6 +52,6 @@
 	self.cmdCode = msgRequest.cmdCode;
 	self.modelDelegage = msgRequest.modelDelegage;
     self.postBody = msgRequest.postBody;
-    self.timeoutSeconds = msgRequest.timeoutSeconds;
+    self.timeOutSeconds = msgRequest.timeOutSeconds;
 }
 @end
